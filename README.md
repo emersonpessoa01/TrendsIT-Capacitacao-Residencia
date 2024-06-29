@@ -1,6 +1,6 @@
-<img align="left" src="./image/Ahsoka_vs_Maul.gif" width="300" height="auto">
+<img align="left" src="./image/trendsit-page.webp" width="300" height="auto">
 
-<!-- <img src="./image/trendsIT-logo.webp" style="filter: brightness(2.5);"> -->
+<img src="./image/trendsIT-logo.webp" style="filter: brightness(2.5);">
 <p>O <strong>TrendsIT – Capacitação &amp; Residência</strong> é uma iniciativa do Ministério da Ciência e Tecnologia com realização do Núcleo Softex Campinas e coordenação do Softex Nacional. Trata-se de um programa gratuito que visa oferecer a alunos capacitação, aperfeiçoamento do portfólio de conhecimentos técnicos e comportamentais de e vivência profissional mercado de Tecnologia da Informação. Ao mesmo tempo, busca suprir a carência de profissionais qualificados no mercado.</p>
 <br>
 <div><h2><a href="https://softexcps.org.br/programa-trendsit/"><strong>Sobre o programa</strong></a></h2>
