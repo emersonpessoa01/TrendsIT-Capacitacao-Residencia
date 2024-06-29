@@ -3,13 +3,13 @@
 <img src="./image/trendsIT-logo.webp" style="filter: brightness(2.5);">
 <p>O <strong>TrendsIT – Capacitação &amp; Residência</strong> é uma iniciativa do Ministério da Ciência e Tecnologia com realização do Núcleo Softex Campinas e coordenação do Softex Nacional. Trata-se de um programa gratuito que visa oferecer a alunos capacitação, aperfeiçoamento do portfólio de conhecimentos técnicos e comportamentais de e vivência profissional mercado de Tecnologia da Informação. Ao mesmo tempo, busca suprir a carência de profissionais qualificados no mercado.</p>
 <br>
-<div><h2><strong>Sobre o programa</strong></h2>
+<div><h2><a href="https://softexcps.org.br/programa-trendsit/"><strong>Sobre o programa</strong></a></h2>
 </div>
 <div>
 <img align="left" src="./image/screen-monitor.webp" width="380" height="auto" style="margin:10px">
 </div>
 
-<p><strong><a href="https://lp.workover.com.br/softex-trendsit">O TrendsIT </a></strong>consiste em duas etapas distintas: <strong>capacitação</strong> e <strong>residência</strong>.</p>
+<p>O TrendsIT consiste em duas etapas distintas: <strong>capacitação</strong> e <strong>residência</strong>.</p>
 
 <h4><span>Capacitação</span></h4>
 <div><p>Compreende as modalidades de nivelamento e aprofundamento de competências e conhecimentos requeridos para preparar profissionais para atender as demandas por vagas de empresas e ICTs. Ela é realizada por meio de cursos on-line assíncronos em uma plataforma de EAD especialmente preparada para a capacitação de desenvolvedores full-stack e mobile para IOS e Android.</p></div>
@@ -24,3 +24,4 @@
 <p>As atividades de residência incluem atividades como compor equipes de projetos, pesquisas de ferramentas e tecnologias, execução de demandas definidas pelos gerentes de projetos, elaboração de relatórios de atividades e documentação técnica, entre outras.</p></div>
 <div><h2><strong>>></strong><a href="https://softexcps.org.br/seja-associado/" target="_blank">Empresas parceiras</a></h2></div>
 <p>O TrendsIT também reúne companhias localizadas em várias regiões do país, que contribuem para a formação dos conteúdos de acordo com as especialidades demandadas em seus respectivos mercados. Os currículos de todos aqueles que concluírem a etapa de capacitação, independentemente de sua participação ou não na etapa de residência, serão disponibilizados a todas as empresas parceiras interessadas na contratação de novos profissionais de TI.</p></div>
+<br>
