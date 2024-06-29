@@ -20,7 +20,7 @@
 <p>A residência será cumprida em regime de tempo integral, com carga horária de 6 (seis) horas diárias, totalizando 30 (trinta) horas semanais, pelo período de 6 (seis) meses, envolvendo atividades práticas no ambiente de trabalho, apoiado por profissionais da empresa ou ICTs. Os alunos selecionados receberão uma ajuda de custo no valor de R$ 1.100,00.&nbsp;</p>
 <p>Os estágios poderão ser realizados de forma presencial, remota ou híbrida conforme as diretrizes estabelecidas pelos parceiros em seus respectivos editais de chamamento. Os editais também informarão o que as empresas esperam dos alunos e qual a área específica que o aluno poderá se especializar durante a residência.&nbsp;</p>
 <p>As atividades de residência incluem atividades como compor equipes de projetos, pesquisas de ferramentas e tecnologias, execução de demandas definidas pelos gerentes de projetos, elaboração de relatórios de atividades e documentação técnica, entre outras.</p></div>
-<div><h2><strong>>></strong><a href="https://softexcps.org.br/seja-associado/">Empresas parceiras</a></h2></div>
+<div><h2><strong>>></strong><a href="https://softexcps.org.br/seja-associado/" target="_blank">Empresas parceiras</a></h2></div>
 <p>O TrendsIT também reúne companhias localizadas em várias regiões do país, que contribuem para a formação dos conteúdos de acordo com as especialidades demandadas em seus respectivos mercados. Os currículos de todos aqueles que concluírem a etapa de capacitação, independentemente de sua participação ou não na etapa de residência, serão disponibilizados a todas as empresas parceiras interessadas na contratação de novos profissionais de TI.</p></div>
 <br>
 
