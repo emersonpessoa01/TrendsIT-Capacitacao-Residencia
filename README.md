@@ -23,8 +23,5 @@
 <div><h2><strong>Empresas parceiras<br></strong></h2>
 <p>O TrendsIT também reúne companhias localizadas em várias regiões do país, que contribuem para a formação dos conteúdos de acordo com as especialidades demandadas em seus respectivos mercados. Os currículos de todos aqueles que concluírem a etapa de capacitação, independentemente de sua participação ou não na etapa de residência, serão disponibilizados a todas as empresas parceiras interessadas na contratação de novos profissionais de TI.</p></div>
 <br>
-<br>
-<a href="https://softexcps.org.br/seja-associado/" style="padding:12px 24px;background: #9d9dd9;font-size:16px; color: #fff;text-decoration:none;">Associados</a>
-<br>
-<br>
-<a href="https://exemplo.com" style="padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px;">Clique aqui para mais informações</a>
+
+<div align="center"><h2><a href="https://softexcps.org.br/seja-associado/">Empresas parceiras</a></h2></div>
