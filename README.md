@@ -25,3 +25,6 @@
 <br>
 <br>
 <a href="https://softexcps.org.br/seja-associado/" style="padding:12px 24px;background: #9d9dd9;font-size:16px; color: #fff;text-decoration:none;">Associados</a>
+<br>
+<br>
+<a href="https://exemplo.com" style="padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px;">Clique aqui para mais informações</a>
