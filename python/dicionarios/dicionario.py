@@ -5,7 +5,10 @@ contato = {
 print("Exemplo de Dicionário:", contato["@paollaoliveira"])
 print("Exemplo de Get:", contato.get("@paollaoliveira"))
 
+contato.update({"@paollaoliveira": "Linda"})
+contato.update({"bruna_ionica": "Bruna Marquezine"})
 
+print("Novo Contato com update:", contato)
 
 instagram = [
     "@camilaqueiroz",
