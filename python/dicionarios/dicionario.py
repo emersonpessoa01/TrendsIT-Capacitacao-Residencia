@@ -25,3 +25,10 @@ for i in contato:
 
 indice = instagram.index("@paollaoliveira")
 print("Exemplo de Lista:", nomes[indice])
+
+
+insta = input("Digite um instagram: ")
+if insta in contato:
+    print("Este instagram é de {}".format(contato.get(insta)))
+else:
+    print("Este instagram não está cadastrado.")
