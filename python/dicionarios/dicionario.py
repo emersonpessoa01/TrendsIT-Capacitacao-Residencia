@@ -1,7 +1,10 @@
+from operator import itemgetter
+
+
 contato = {
     "@camilaqueiroz": "Camila Queiroz",
     "@paollaoliveira": "Paolla Oliveira",
-    "@sheronmenezes":"Sheron Menezes"
+    "@sheronmenezes": "Sheron Menezes"
 }
 print("Exemplo de Dicionário:", contato["@paollaoliveira"])
 
@@ -34,13 +37,13 @@ indice = instagram.index("@paollaoliveira")
 print("Exemplo de Lista:", nomes[indice])
 print("")
 
-# Como localizar elementos em um dicionário 
-insta = input("Digite um instagram: ")
-if insta in contato:
-    print("Este instagram inserido é de {}".format(contato.get(insta)))
-else:
-    print("Este instagram não está cadastrado.")
-print("")
+# Como localizar elementos em um dicionário
+# insta = input("Digite um instagram: ")
+# if insta in contato:
+#     print("Este instagram inserido é de {}".format(contato.get(insta)))
+# else:
+#     print("Este instagram não está cadastrado.")
+# print("")
 
 # Como contar o número de elementos de um dicionário
 print("Antes de incluir Marquezine: {}".format(len(contato)))
@@ -61,9 +64,27 @@ for atriz in contato.values():
 print("")
 # Como acessar Itens: Chave e valor respectivamente
 for insta, atriz in contato.items():
-    print("o instagram de {} é {}".format(atriz,insta))
+    print("o instagram de {} é {}".format(atriz, insta))
 print("")
 # Como ordenar os elementos de um Dicionário
-for insta,nome in sorted(contato.items()):
+for insta, nome in sorted(contato.items()):
     print("Nome ordenado:", nome, "Instagram:", insta)
 print("")
+
+# Ordenar um dicionário com base nos valores
+# de forma crescente
+contato = {
+    "@camilaqueiroz": 1.77,
+    "@paollaoliveira": 1.70,
+    "@sheronmenezes": 1.67,
+    "@bruna_ionica": 1.70
+}
+
+for insta, altura in sorted(contato.items(), key=itemgetter(1)):
+    print("Na forma crescente {} --> {:.2f}".format(insta,altura))
+print("")
+
+# Ordenar um dicionário com base nos valores
+# de forma decrescente
+for insta, altura in sorted(contato.items(), key=itemgetter(1),reverse=True):
+    print("Na forma decrescente {} --> {:.2f}".format(insta,altura))
