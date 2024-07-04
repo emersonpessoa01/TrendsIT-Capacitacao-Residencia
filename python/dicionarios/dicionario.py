@@ -1,6 +1,7 @@
 contato = {
     "@camilaqueiroz": "Camila Queiroz",
-    "@paollaoliveira": "Paolla Oliveira"
+    "@paollaoliveira": "Paolla Oliveira",
+    "@sheronmenezes":"Sheron Menezes"
 }
 print("Exemplo de Dicionário:", contato["@paollaoliveira"])
 
@@ -31,20 +32,25 @@ nomes = [
 
 indice = instagram.index("@paollaoliveira")
 print("Exemplo de Lista:", nomes[indice])
+print("")
 
 # Como localizar elementos em um dicionário 
 insta = input("Digite um instagram: ")
 if insta in contato:
-    print("Este instagram é de {}".format(contato.get(insta)))
+    print("Este instagram inserido é de {}".format(contato.get(insta)))
 else:
     print("Este instagram não está cadastrado.")
+print("")
+
 # Como contar o número de elementos de um dicionário
 print("Antes de incluir Marquezine: {}".format(len(contato)))
 contato.update({
     "@marquezine": "Marquezine"
 })
-print("Depois de incluir Marquezine: {}".format(len(contato)))
+print("")
 
+print("Depois de incluir Marquezine: {}".format(len(contato)))
+print("")
 # Como acessar Chaves, Valores e Itens em um Dicionário
 for insta in contato.keys():
     print("Chave Instagram:", insta)
@@ -52,7 +58,12 @@ for insta in contato.keys():
 # Como acessar os valores
 for atriz in contato.values():
     print("Nome da atriz:", atriz)
-
+print("")
 # Como acessar Itens: Chave e valor respectivamente
 for insta, atriz in contato.items():
     print("o instagram de {} é {}".format(atriz,insta))
+print("")
+# Como ordenar os elementos de um Dicionário
+for insta,nome in sorted(contato.items()):
+    print("Nome ordenado:", nome, "Instagram:", insta)
+print("")
