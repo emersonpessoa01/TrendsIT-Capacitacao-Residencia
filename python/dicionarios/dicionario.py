@@ -32,3 +32,9 @@ if insta in contato:
     print("Este instagram é de {}".format(contato.get(insta)))
 else:
     print("Este instagram não está cadastrado.")
+
+print("Antes de incluir Marquezine: {}".format(len(contato)))
+contato.update({
+    "@marquezine": "Marquezine"
+})
+print("Depois de incluir Marquezine: {}".format(len(contato)))
