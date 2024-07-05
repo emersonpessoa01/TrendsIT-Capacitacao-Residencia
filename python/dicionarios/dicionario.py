@@ -81,10 +81,35 @@ contato = {
 }
 
 for insta, altura in sorted(contato.items(), key=itemgetter(1)):
-    print("Na forma crescente {} --> {:.2f}".format(insta,altura))
+    print("Na forma crescente {} --> {:.2f}".format(insta, altura))
 print("")
 
 # Ordenar um dicionário com base nos valores
 # de forma decrescente
-for insta, altura in sorted(contato.items(), key=itemgetter(1),reverse=True):
-    print("Na forma decrescente {} --> {:.2f}".format(insta,altura))
+for insta, altura in sorted(contato.items(), key=itemgetter(1), reverse=True):
+    print("Na forma decrescente {} --> {:.2f}".format(insta, altura))
+
+# Como excluir elementos de um Dicionário
+backup = contato.copy()
+print("Antes de excluir:", backup)
+print("")
+contato.pop("@paollaoliveira")
+print("Depois de excluir:", contato)
+print("")
+# Como excluir o último elemento de um Dicionário
+contato.popitem()
+print("Excluindo o último item:", contato)
+print("")
+
+# Como esvaziar um Dicionário
+
+contato.clear()
+print("Esvaziando o dicionário:", contato)
+print("")
+
+# Como verificar se um elemento está em um Dicionário
+
+print("Verificando a existência do item: ", "@camilaqueiroz" in contato)
+print("Verificando a existência do item: ", "@anderson_silva" in contato)
+print("")
+
