@@ -8,3 +8,9 @@ print("")
 #Outra forma melhorar o sáida da calcula_dobro_triplo
 dobro,triplo =calcula_dobro_triplo(3)
 print("O dobro de {} é {} e o triplo é {}".format(3, dobro, triplo))
+print("")
+#Calcula Área do Círculo
+print("A área do círculo com raio de {} é {}".format(3,calcula_area_circulo()))
+print("")
+#Calcula Comprimento do Círculo
+print("O comprimento do círculo com raio de {} é {}".format(3,calcula_comprimento_circulo()))
