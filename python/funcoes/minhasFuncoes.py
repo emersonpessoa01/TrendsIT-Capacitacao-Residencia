@@ -16,3 +16,10 @@ def calcula_area_circulo():
 def calcula_comprimento_circulo():
     raio = 3
     return 2 * valor_PI * raio
+
+def retorna_menor_maior_media(L):
+    # menor = min(L)
+    # maior = max(L)
+    # media = sum(L) / len(L)
+    # return menor, maior, media
+    return min(L), max(L), sum(L) / len(L)
