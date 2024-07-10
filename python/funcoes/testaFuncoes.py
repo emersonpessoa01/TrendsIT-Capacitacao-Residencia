@@ -16,9 +16,17 @@ print("")
 print("O comprimento do círculo com raio de {} é {}".format(
     3, calcula_comprimento_circulo()))
 print("")
-# Calcula Menor, Maior e Media de uma lista
 
+# Calcula Menor, Maior e Media de uma lista
 lista = [7, 2, 3, 4]
 menor, maior, media = retorna_menor_maior_media(lista)
 print("Menor valor: {}, Maior valor: {}, Média: {}".format(menor, maior, media))
+print("")
+
+# Ordem dos argumentos de uma função
+varX = 5
+varY = 7
+dobroX,dobroY = calcula_dobroX_trploY(varX, varY)
+
+print("O dobro de {} é {} e o triplo de {} é {}".format(varX, dobroX, varY, dobroY))
 print("")
