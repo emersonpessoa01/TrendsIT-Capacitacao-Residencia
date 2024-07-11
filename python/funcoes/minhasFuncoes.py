@@ -42,16 +42,48 @@ def calcula_dobroX_trploY(x, y):
     return x * 2, y * 3
 
 # Como usar funções com parâmetros default
-def calcula_IMC(peso, altura,nome="Prezado"):
+
+
+def calcula_IMC(peso, altura, nome="Prezado"):
     """Calcula o IMC de uma pessoa."""
     imc = peso / pow(altura, 2)
     print("{}: seu IMC é {:.2f}".format(nome, imc))
 
+
 """Função calcula_distancia"""
 
 # Calcula a distância entre dois pontos
+
+
 def calcula_distancia(x1, y1, x2, y2):
     # return ((x2 - x1)**2 + (y2 - y1)**2)**0.5
     from math import sqrt
     return sqrt((x2 - x1)**2 + (y2 - y1)**2)
+
+
 """Função calcula_mediana"""
+
+"""Função gera_matriz_aleatoria"""
+
+
+def gera_matriz_aleatoria(lin, col):
+    import random
+    while True:
+        M = []
+        for i in range(lin):
+            LINHA = []
+            for j in range(col):
+                num = random.randint(1, 10)
+                LINHA.append(num)
+            M.append(LINHA)
+        break
+    return M
+
+# Criar uma matriz 2D com valores aleatórios
+def imprimi_matriz(M):
+    lin = len(M)
+    col = len(M[0]) # ler a qtdade de items dentro indice 0, no caso, são 2 itens
+    for i in range(lin):
+        for j in range(col):
+            print(M[i][j], end="\t")
+        print("")

@@ -1,3 +1,4 @@
+import random
 from minhasFuncoes import *
 saudar()
 saudar_aluno("Emerson")
@@ -48,3 +49,13 @@ yB = float(input("Digite o valor da coordenada Y do ponto B: "))
 dAB = calcula_distancia(xA, yA, xB, yB)
 
 print("A distância entre os pontos A e B é {:.2f}.".format(dAB))
+print("")
+
+# Criar uma matriz 2D com valores aleatórios
+lin = int(input("Quantidade de linhas da matriz: "))
+col = int(input("Quantidade de colunas da matriz: "))
+if lin > 0 and col > 0:
+    M = gera_matriz_aleatoria(lin, col)
+    imprimi_matriz(M)
+else:
+    print("Os valores formados não formam uma matriz")
