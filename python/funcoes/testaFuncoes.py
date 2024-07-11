@@ -26,7 +26,10 @@ print("")
 # Ordem dos argumentos de uma função
 varX = 5
 varY = 7
-dobroX,dobroY = calcula_dobroX_trploY(varX, varY)
+dobroX, dobroY = calcula_dobroX_trploY(varX, varY)
 
 print("O dobro de {} é {} e o triplo de {} é {}".format(varX, dobroX, varY, dobroY))
 print("")
+
+# Como usar funções com parâmetros default
+print(calcula_IMC(84, 1.84))

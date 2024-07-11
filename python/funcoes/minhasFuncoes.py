@@ -40,3 +40,8 @@ def retorna_menor_maior_media(L):
 
 def calcula_dobroX_trploY(x, y):
     return x * 2, y * 3
+
+# Como usar funções com parâmetros default
+def calcula_IMC(peso, altura,nome="Prezado"):
+    imc = peso / pow(altura, 2)
+    print("{}: seu IMC é {:.2f}".format(nome, imc))
