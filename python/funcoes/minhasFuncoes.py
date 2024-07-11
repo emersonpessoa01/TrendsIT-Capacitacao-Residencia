@@ -47,4 +47,11 @@ def calcula_IMC(peso, altura,nome="Prezado"):
     imc = peso / pow(altura, 2)
     print("{}: seu IMC é {:.2f}".format(nome, imc))
 
-# Como Documentar um Função Python
+"""Função calcula_distancia"""
+
+# Calcula a distância entre dois pontos
+def calcula_distancia(x1, y1, x2, y2):
+    # return ((x2 - x1)**2 + (y2 - y1)**2)**0.5
+    from math import sqrt
+    return sqrt((x2 - x1)**2 + (y2 - y1)**2)
+"""Função calcula_mediana"""

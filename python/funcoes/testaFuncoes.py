@@ -33,5 +33,18 @@ print("")
 
 # Como usar funções com parâmetros default
 print(calcula_IMC(84, 1.84))
-print(calcula_IMC.__doc__)
 # Como Documentar um Função Python
+print(calcula_IMC.__doc__)
+print("")
+"""Função calcula_distancia"""
+xA = float(input("Digite o valor da coordenada X do ponto A: "))
+
+yA = float(input("Digite o valor da coordenada Y do ponto A: "))
+
+xB = float(input("Digite o valor da coordenada X do ponto B: "))
+
+yB = float(input("Digite o valor da coordenada Y do ponto B: "))
+
+dAB = calcula_distancia(xA, yA, xB, yB)
+
+print("A distância entre os pontos A e B é {:.2f}.".format(dAB))
