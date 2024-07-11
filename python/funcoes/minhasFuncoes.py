@@ -43,5 +43,8 @@ def calcula_dobroX_trploY(x, y):
 
 # Como usar funções com parâmetros default
 def calcula_IMC(peso, altura,nome="Prezado"):
+    """Calcula o IMC de uma pessoa."""
     imc = peso / pow(altura, 2)
     print("{}: seu IMC é {:.2f}".format(nome, imc))
+
+# Como Documentar um Função Python

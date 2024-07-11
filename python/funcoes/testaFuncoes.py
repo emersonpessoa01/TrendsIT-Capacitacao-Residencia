@@ -33,3 +33,5 @@ print("")
 
 # Como usar funções com parâmetros default
 print(calcula_IMC(84, 1.84))
+print(calcula_IMC.__doc__)
+# Como Documentar um Função Python
