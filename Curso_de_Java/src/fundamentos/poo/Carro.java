@@ -1,12 +1,8 @@
-package poo;
+package fundamentos.poo;
 
 import java.util.Random;
-<<<<<<< HEAD
 //modelo para criação de objetos
 //Exemplos de abstração: definir uma classe
-=======
-
->>>>>>> 751acaa1614533afc97527b40bb73c8bfb16f8db
 public class Carro {
 	int ano;
 	String cor;

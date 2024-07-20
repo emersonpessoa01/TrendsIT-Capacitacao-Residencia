@@ -1,4 +1,4 @@
-package poo;
+package fundamentos.poo;
 
 public class Camaro {
 

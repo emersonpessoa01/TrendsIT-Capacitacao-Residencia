@@ -1,4 +1,4 @@
-package poo;
+package fundamentos.poo;
 
 public class Cessna {
 	//Exemplos de heranças: reutilização de 
@@ -12,8 +12,9 @@ public class Cessna {
 		System.out.println("Ano: "+ cessna.ano);
 		System.out.println("Cor: "+ cessna.cor);
 		System.out.println("Envergadura: "+ cessna.envergadura + " m");
-		cessna.aterrizar();		
-		cessna.desligar();
+		cessna.ligar();
+		cessna.aterrizar();
+		cessna.acelerar();
 		
 				
 
