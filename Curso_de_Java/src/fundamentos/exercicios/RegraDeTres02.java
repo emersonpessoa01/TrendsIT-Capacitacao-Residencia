@@ -13,10 +13,10 @@ public class RegraDeTres2 {
 		DecimalFormat formatador = new DecimalFormat("#0.00");
 		// Entrada
 		System.out.println("Regra de três");
-		System.out.print("x% de y = valor");
+		System.out.println("x% de y = valor");
 		System.out.println("Digite o valor de x: ");
 		x = teclado.nextDouble();
-		System.out.print("Digite o valor de y: ");
+		System.out.println("Digite o valor de y: ");
 		y = teclado.nextDouble();
 
 		// processamento
