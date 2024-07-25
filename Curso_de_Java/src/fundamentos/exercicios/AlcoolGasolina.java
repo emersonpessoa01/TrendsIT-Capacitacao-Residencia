@@ -3,7 +3,13 @@ package fundamentos.exercicios;
 import java.util.Scanner;
 
 /*
- *  Para carros é preciso ter cautela ao escolher o combustível na hora de abastecer. A principal diferença de preços e vantagens entre os dois combustíveis está na proporção preço X desempenho. Para o álcool ser mais vantajoso do que a gasolina, o preço do litro tem que custar até 70% do litro da gasolina. baseado nestas informações desenvolva um aplicativo no console(terminal) para determinar qual é o combustível mais vantajoso para abastecer.
+ *  Para carros é preciso ter cautela ao escolher o combustível 
+ *  na hora de abastecer. A principal diferença de preços e vantagens 
+ *  entre os dois combustíveis está na proporção preço X desempenho. 
+ *  Para o álcool ser mais vantajoso do que a gasolina, o preço do 
+ *  litro tem que custar até 70% do litro da gasolina. baseado nestas 
+ *  informações desenvolva um aplicativo no console(terminal) 
+ *  para determinar qual é o combustível mais vantajoso para abastecer.
  * */
 
 public class AlcoolGasolina {
