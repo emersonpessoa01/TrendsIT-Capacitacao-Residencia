@@ -8,12 +8,24 @@ namespace pooMensagem
 {
     public class Mensagem
     {
-       public String TextoMensagem;
+       private String TextoMensagem;
     
-      public void ExibirMensagem()
-        {
-            Console.WriteLine(this.TextoMensagem);
+      //public void ExibirMensagem()
+      //  {
+      //      Console.WriteLine(this.TextoMensagem);
 
+      //  }
+
+        //Encapsulamento
+        //Métodos de acesso da classe 
+        public String getTextoMensagem()
+        {
+            return this.TextoMensagem; // 'this' serve para interagir com algo que é do próprio objeto
+
+        }
+        public void setTextoMensagem(String textoMensagem)
+        {
+            this.TextoMensagem = textoMensagem.ToUpper();
         }
     }
 }
