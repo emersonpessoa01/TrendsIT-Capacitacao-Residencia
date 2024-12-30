@@ -16,7 +16,8 @@ namespace pooCalculaIdade
             pessoa.Nome = Console.ReadLine();
             Console.WriteLine("Ano de nascimento");
             pessoa.AnoNascimento = Convert.ToInt32(Console.ReadLine());
-            pessoa.exibirDados();
+            //pessoa.exibirDados();
+            Console.WriteLine(pessoa.Idade);
             Console.ReadKey();
 
         }
