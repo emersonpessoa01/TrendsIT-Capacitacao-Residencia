@@ -8,8 +8,17 @@ namespace pooCalculaIdade
 {
     public class Pessoa
 
-    //Encapsulamento dos dados
     {
+        String nomePessoa;
+        int anoNascimentoPessoa;
+        //Construtor
+        public Pessoa(String nomePessoa, int anoNascimentoPessoa) {
+            this.nome = nomePessoa;
+            this.anoNascimento = anoNascimentoPessoa;
+            this.CalcularIdade();
+        }
+
+    //Encapsulamento dos dados
         private int anoNascimento;
 
         public int AnoNascimento
