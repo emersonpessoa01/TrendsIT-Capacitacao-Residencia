@@ -1,0 +1,7 @@
+C:\Users\IBYTE\source\repos\pooPokemon\pooPokemon\obj\Debug\pooPokemon.csproj.AssemblyReference.cache
+C:\Users\IBYTE\source\repos\pooPokemon\pooPokemon\obj\Debug\pooPokemon.csproj.CoreCompileInputs.cache
+C:\Users\IBYTE\source\repos\pooPokemon\pooPokemon\bin\Debug\pooPokemon.exe.config
+C:\Users\IBYTE\source\repos\pooPokemon\pooPokemon\bin\Debug\pooPokemon.exe
+C:\Users\IBYTE\source\repos\pooPokemon\pooPokemon\bin\Debug\pooPokemon.pdb
+C:\Users\IBYTE\source\repos\pooPokemon\pooPokemon\obj\Debug\pooPokemon.exe
+C:\Users\IBYTE\source\repos\pooPokemon\pooPokemon\obj\Debug\pooPokemon.pdb
