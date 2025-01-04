@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\IBYTE\\source\\repos\\AreaRetangulo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{590381B5-E4B7-4E12-8B04-4A4C8F07EDEB}|AreaRetangulo\\AreaRetangulo.csproj|c:\\users\\ibyte\\source\\repos\\arearetangulo\\arearetangulo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590381B5-E4B7-4E12-8B04-4A4C8F07EDEB}|AreaRetangulo\\AreaRetangulo.csproj|solutionrelative:arearetangulo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590381B5-E4B7-4E12-8B04-4A4C8F07EDEB}|AreaRetangulo\\AreaRetangulo.csproj|c:\\users\\ibyte\\source\\repos\\arearetangulo\\arearetangulo\\retangulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590381B5-E4B7-4E12-8B04-4A4C8F07EDEB}|AreaRetangulo\\AreaRetangulo.csproj|solutionrelative:arearetangulo\\retangulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Retangulo.cs",
+              "DocumentMoniker": "C:\\Users\\IBYTE\\source\\repos\\AreaRetangulo\\AreaRetangulo\\Retangulo.cs",
+              "RelativeDocumentMoniker": "AreaRetangulo\\Retangulo.cs",
+              "ToolTip": "C:\\Users\\IBYTE\\source\\repos\\AreaRetangulo\\AreaRetangulo\\Retangulo.cs",
+              "RelativeToolTip": "AreaRetangulo\\Retangulo.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAMwDQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T19:23:14.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IBYTE\\source\\repos\\AreaRetangulo\\AreaRetangulo\\Program.cs",
+              "RelativeDocumentMoniker": "AreaRetangulo\\Program.cs",
+              "ToolTip": "C:\\Users\\IBYTE\\source\\repos\\AreaRetangulo\\AreaRetangulo\\Program.cs*",
+              "RelativeToolTip": "AreaRetangulo\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T19:22:28.624Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

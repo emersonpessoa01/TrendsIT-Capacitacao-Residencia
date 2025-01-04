@@ -1,0 +1,7 @@
+C:\Users\IBYTE\source\repos\AreaRetangulo\AreaRetangulo\bin\Debug\AreaRetangulo.exe.config
+C:\Users\IBYTE\source\repos\AreaRetangulo\AreaRetangulo\bin\Debug\AreaRetangulo.exe
+C:\Users\IBYTE\source\repos\AreaRetangulo\AreaRetangulo\bin\Debug\AreaRetangulo.pdb
+C:\Users\IBYTE\source\repos\AreaRetangulo\AreaRetangulo\obj\Debug\AreaRetangulo.csproj.AssemblyReference.cache
+C:\Users\IBYTE\source\repos\AreaRetangulo\AreaRetangulo\obj\Debug\AreaRetangulo.csproj.CoreCompileInputs.cache
+C:\Users\IBYTE\source\repos\AreaRetangulo\AreaRetangulo\obj\Debug\AreaRetangulo.exe
+C:\Users\IBYTE\source\repos\AreaRetangulo\AreaRetangulo\obj\Debug\AreaRetangulo.pdb
