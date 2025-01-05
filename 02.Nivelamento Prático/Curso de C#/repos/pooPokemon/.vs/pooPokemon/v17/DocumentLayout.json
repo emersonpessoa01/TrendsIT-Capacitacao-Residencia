@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\IBYTE\\source\\repos\\pooPokemon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{51EE23DB-60E5-4334-BDBC-600FD6C96879}|pooPokemon\\pooPokemon.csproj|c:\\users\\ibyte\\source\\repos\\poopokemon\\poopokemon\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51EE23DB-60E5-4334-BDBC-600FD6C96879}|pooPokemon\\pooPokemon.csproj|solutionrelative:poopokemon\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51EE23DB-60E5-4334-BDBC-600FD6C96879}|pooPokemon\\pooPokemon.csproj|c:\\users\\ibyte\\source\\repos\\poopokemon\\poopokemon\\pokedex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51EE23DB-60E5-4334-BDBC-600FD6C96879}|pooPokemon\\pooPokemon.csproj|solutionrelative:poopokemon\\pokedex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51EE23DB-60E5-4334-BDBC-600FD6C96879}|pooPokemon\\pooPokemon.csproj|c:\\users\\ibyte\\source\\repos\\poopokemon\\poopokemon\\pokemon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{51EE23DB-60E5-4334-BDBC-600FD6C96879}|pooPokemon\\pooPokemon.csproj|C:\\Users\\IBYTE\\source\\repos\\pooPokemon\\poopokemon\\pokemon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51EE23DB-60E5-4334-BDBC-600FD6C96879}|pooPokemon\\pooPokemon.csproj|solutionrelative:poopokemon\\pokemon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51EE23DB-60E5-4334-BDBC-600FD6C96879}|pooPokemon\\pooPokemon.csproj|c:\\users\\ibyte\\source\\repos\\poopokemon\\poopokemon\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51EE23DB-60E5-4334-BDBC-600FD6C96879}|pooPokemon\\pooPokemon.csproj|solutionrelative:poopokemon\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +22,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Pokedex.cs",
+              "DocumentMoniker": "C:\\Users\\IBYTE\\source\\repos\\pooPokemon\\pooPokemon\\Pokedex.cs",
+              "RelativeDocumentMoniker": "pooPokemon\\Pokedex.cs",
+              "ToolTip": "C:\\Users\\IBYTE\\source\\repos\\pooPokemon\\pooPokemon\\Pokedex.cs",
+              "RelativeToolTip": "pooPokemon\\Pokedex.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA+wAoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T21:56:39.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IBYTE\\source\\repos\\pooPokemon\\pooPokemon\\Program.cs",
+              "RelativeDocumentMoniker": "pooPokemon\\Program.cs",
+              "ToolTip": "C:\\Users\\IBYTE\\source\\repos\\pooPokemon\\pooPokemon\\Program.cs",
+              "RelativeToolTip": "pooPokemon\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T20:16:29.352Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -32,22 +62,9 @@
               "RelativeDocumentMoniker": "pooPokemon\\Pokemon.cs",
               "ToolTip": "C:\\Users\\IBYTE\\source\\repos\\pooPokemon\\pooPokemon\\Pokemon.cs",
               "RelativeToolTip": "pooPokemon\\Pokemon.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwD0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-04T20:17:11.586Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IBYTE\\source\\repos\\pooPokemon\\pooPokemon\\Program.cs",
-              "RelativeDocumentMoniker": "pooPokemon\\Program.cs",
-              "ToolTip": "C:\\Users\\IBYTE\\source\\repos\\pooPokemon\\pooPokemon\\Program.cs",
-              "RelativeToolTip": "pooPokemon\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T20:16:29.352Z",
               "EditorCaption": ""
             }
           ]

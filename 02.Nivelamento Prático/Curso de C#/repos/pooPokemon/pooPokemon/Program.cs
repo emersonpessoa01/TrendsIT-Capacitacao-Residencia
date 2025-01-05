@@ -10,11 +10,15 @@ namespace pooPokemon
     {
         static void Main(string[] args)
         {
-            Pokemon pokemon = new Pokemon("Bulbasauro", "Bulbasauro é um pokemon tipo planta...");
+            // Pokemon pokemon = new Pokemon("Bulbasauro", "Bulbasauro é um pokemon tipo planta...");
             //Pokemon pokemon = new Pokemon();
             //pokemon.Nome = "Bulbasauro";
             //pokemon.Descricao = "Bulbasauro é um pokemon tipo planta...";
-            pokemon.ExibirDaddos();
+            //pokemon.ExibirDaddos(true);
+
+            Pokedex pokedex = new Pokedex();
+            Pokemon p = pokedex.Pokemons[1];
+            p.ExibirDaddos();
             Console.ReadKey();
         }
     }

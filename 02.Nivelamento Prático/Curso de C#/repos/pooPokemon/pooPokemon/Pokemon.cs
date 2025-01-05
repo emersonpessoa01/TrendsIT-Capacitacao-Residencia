@@ -10,8 +10,8 @@ namespace pooPokemon
     {
         public Pokemon()
         {
-            this.Nome = ""; //Nome vai começarem branco
-            this.Descricao = ""; //Descrição vai começarem branco
+            this.Nome = ""; //Nome vai começar em branco
+            this.Descricao = ""; //Descrição vai começar em branco
         }
         //Sobrecarga
         public Pokemon(String nome, String descricao)
@@ -38,7 +38,10 @@ namespace pooPokemon
 
         public String Descricao //Representa a característica Descricao do meu Pokemon
         {
-            get { return this.descricao; }
+            get
+            {
+                return this.descricao;
+            }
             set
             {
                 String texto = value.ToUpper();
@@ -51,11 +54,12 @@ namespace pooPokemon
             Console.WriteLine("Nome do Pokemon: " + this.Nome);
             Console.WriteLine("Descrição do Pokemon: " + this.Descricao);
         }
+        //Sobrecarga
         public void ExibirDaddos(Boolean formatado)
         {
             if (formatado == true)
             {
-                Console.WriteLine("Pokemon: " + this.Nome + ": " + this.Descricao.ToUpper());
+                Console.WriteLine("Pokemon " + this.Nome + ": " + this.Descricao.ToUpper());
 
             }
             else
