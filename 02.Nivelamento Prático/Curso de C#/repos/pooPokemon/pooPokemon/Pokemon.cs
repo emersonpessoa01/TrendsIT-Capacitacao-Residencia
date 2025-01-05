@@ -8,9 +8,16 @@ namespace pooPokemon
 {
     public class Pokemon
     {
-        public Pokemon() {
+        public Pokemon()
+        {
             this.Nome = ""; //Nome vai começarem branco
             this.Descricao = ""; //Descrição vai começarem branco
+        }
+        //Sobrecarga
+        public Pokemon(String nome, String descricao)
+        {
+            this.Nome = nome;
+            this.Descricao = descricao;
         }
         private String nome;
 
@@ -41,8 +48,21 @@ namespace pooPokemon
 
         public void ExibirDaddos()
         {
-            Console.WriteLine("Nome do Pokemon: "+ this.Nome);
-            Console.WriteLine("Descrição do Pokemon: "+this.Descricao);
+            Console.WriteLine("Nome do Pokemon: " + this.Nome);
+            Console.WriteLine("Descrição do Pokemon: " + this.Descricao);
+        }
+        public void ExibirDaddos(Boolean formatado)
+        {
+            if (formatado == true)
+            {
+                Console.WriteLine("Pokemon: " + this.Nome + ": " + this.Descricao.ToUpper());
+
+            }
+            else
+            {
+                Console.WriteLine("Nome do Pokemon: " + this.Nome);
+                Console.WriteLine("Descrição do Pokemon: " + this.Descricao);
+            }
         }
 
     }
