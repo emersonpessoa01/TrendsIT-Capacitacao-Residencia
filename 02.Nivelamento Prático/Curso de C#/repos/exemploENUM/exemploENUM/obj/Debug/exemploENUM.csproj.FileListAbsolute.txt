@@ -1,0 +1,7 @@
+C:\Users\IBYTE\source\repos\exemploENUM\exemploENUM\bin\Debug\exemploENUM.exe.config
+C:\Users\IBYTE\source\repos\exemploENUM\exemploENUM\bin\Debug\exemploENUM.exe
+C:\Users\IBYTE\source\repos\exemploENUM\exemploENUM\bin\Debug\exemploENUM.pdb
+C:\Users\IBYTE\source\repos\exemploENUM\exemploENUM\obj\Debug\exemploENUM.csproj.AssemblyReference.cache
+C:\Users\IBYTE\source\repos\exemploENUM\exemploENUM\obj\Debug\exemploENUM.csproj.CoreCompileInputs.cache
+C:\Users\IBYTE\source\repos\exemploENUM\exemploENUM\obj\Debug\exemploENUM.exe
+C:\Users\IBYTE\source\repos\exemploENUM\exemploENUM\obj\Debug\exemploENUM.pdb
