@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace ControleDeAnimais
 {
+	public enum TipoAnimal
+	{
+		Cachorro,
+		Gato,
+		Peixe
+	};
     public class Animal
     {
 		private String nome;
@@ -16,22 +22,24 @@ namespace ControleDeAnimais
 			set { nome = value.ToUpper(); }
 		}
 
-		private String tipo;
-
-		public String Tipo
+        //private String tipo;// A variável tipo é do tipo String
+        private TipoAnimal tipo; //Com o enum o tipo é do tipo TipoAnimal
+        public TipoAnimal Tipo
 		{//Valores definidos pelo proprietátio - Cachorro, Gato, Peixe
 			get { return tipo; }
-			set { 
-				if(value == "Cachorro" || value == "Gato" || value == "Peixe")
-				{
-					tipo = value;
-				}
-				else
-				{
-					tipo = "Peixe";
+			//set { 
+			//	if(value == "Cachorro" || value == "Gato" || value == "Peixe")
+			//	{
+			//		tipo = value;
+			//	}
+			//	else
+			//	{
+			//		tipo = "Peixe";
 
-                }
-			}
+			//             }
+			//}
+
+			set { tipo = value; }
 		}
 
 
