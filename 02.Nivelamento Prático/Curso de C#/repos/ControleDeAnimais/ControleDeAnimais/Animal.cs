@@ -12,9 +12,21 @@ namespace ControleDeAnimais
 		Gato,
 		Peixe
 	};
+
     public class Animal
+
     {
-		private String nome;
+        public Animal()
+        {
+			this.Nome = "";
+			this.Tipo = TipoAnimal.Peixe;
+        }
+		public Animal(String nome, TipoAnimal tipo)
+        {
+			this.Nome = nome;
+			this.Tipo = tipo;
+        }
+        private String nome;
 
 		public  String Nome
 		{
