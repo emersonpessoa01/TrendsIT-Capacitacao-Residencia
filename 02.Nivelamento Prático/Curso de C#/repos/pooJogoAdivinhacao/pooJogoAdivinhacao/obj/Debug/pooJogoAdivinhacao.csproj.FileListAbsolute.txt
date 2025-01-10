@@ -1,0 +1,7 @@
+C:\Users\IBYTE\source\repos\pooJogoAdivinhacao\pooJogoAdivinhacao\bin\Debug\pooJogoAdivinhacao.exe.config
+C:\Users\IBYTE\source\repos\pooJogoAdivinhacao\pooJogoAdivinhacao\bin\Debug\pooJogoAdivinhacao.exe
+C:\Users\IBYTE\source\repos\pooJogoAdivinhacao\pooJogoAdivinhacao\bin\Debug\pooJogoAdivinhacao.pdb
+C:\Users\IBYTE\source\repos\pooJogoAdivinhacao\pooJogoAdivinhacao\obj\Debug\pooJogoAdivinhacao.csproj.AssemblyReference.cache
+C:\Users\IBYTE\source\repos\pooJogoAdivinhacao\pooJogoAdivinhacao\obj\Debug\pooJogoAdivinhacao.csproj.CoreCompileInputs.cache
+C:\Users\IBYTE\source\repos\pooJogoAdivinhacao\pooJogoAdivinhacao\obj\Debug\pooJogoAdivinhacao.exe
+C:\Users\IBYTE\source\repos\pooJogoAdivinhacao\pooJogoAdivinhacao\obj\Debug\pooJogoAdivinhacao.pdb
