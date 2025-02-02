@@ -27,7 +27,7 @@ public class Controller {
         return "Welcome to the jungle, " + nome + "!";
     }
     /* Vincular classe Pessoa com a Controller */
-    @PostMapping("/pessoa") //Responsável por exibir um nomee idade
+    @PostMapping("/pessoa") //Responsável por exibir um nome e idade
     public Pessoa pessoa(@RequestBody Pessoa p){
        return p;
     } 
