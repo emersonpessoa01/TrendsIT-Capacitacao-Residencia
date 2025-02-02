@@ -24,7 +24,7 @@ CREATE TABLE tbusuario (
 );
 
 -- Alterar nome do NoCPF 
-alter table tbusuario rename column NoCPF to NuCPF;
+alter table tbusuario rename column NoCPF to NuCPF;CoSetor
 
 CREATE TABLE tbrequisicao (
     CoRequisicao INT NOT NULL AUTO_INCREMENT,
@@ -41,3 +41,12 @@ CREATE TABLE tbprodutorequisicao (
     Quantidade INT NOT NULL,
     PRIMARY KEY (IdProdutoRequisicao)
 );
+
+select * from tbusuario;
+
+-- Adicionar uma restrição através de constraint entre tbusuario com tbrequisicao
+-- Criando chave estrangeira na tbrequisao nas colunas do CoUsuario e CoSetor
+ALTER TABLE tbrequisicao ADD CONSTRAINT fk_tbusuariotbrequisicao FOREIGN KEY (CoUsuario) REFERENCES tbusuario(CoUsuario);
+ALTER TABLE tbrequisicao ADD CONSTRAINT fk_tbsetortbrequisicao FOREIGN KEY(CoSetor) REFERENCES	tbsetor(CoSetor);
+ALTER TABLE tbprodutorequisicao ADD CONSTRAINT fk_tbprodutorequisicaotbrequisicao FOREIGN KEY(CoRequisicao) REFERENCES tbrequisicao(CoRequisicao);
+ALTER TABLE tbprodutorequisicao ADD CONSTRAINT fk_tbprodutorequisicaotbproduto FOREIGN KEY(CoProduto) REFERENCES tbproduto(CoProduto);
