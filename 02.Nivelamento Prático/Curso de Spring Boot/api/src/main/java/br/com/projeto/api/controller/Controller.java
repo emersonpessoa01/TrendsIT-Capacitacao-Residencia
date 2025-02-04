@@ -23,7 +23,7 @@ public class Controller {
     }
     @GetMapping("/jungle/{nome}")
     public String helloJungle(@PathVariable String nome) {
-        /* Conacatenar nome */
+        /* Concatenar nome */
         return "Welcome to the jungle, " + nome + "!";
     }
     /* Vincular classe Pessoa com a Controller */

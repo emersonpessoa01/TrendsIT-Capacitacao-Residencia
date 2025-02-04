@@ -44,9 +44,20 @@ CREATE TABLE tbprodutorequisicao (
 
 select * from tbusuario;
 
+-- CRIAÇÃO DAS CHAVES ESTRANGEIRAS
 -- Adicionar uma restrição através de constraint entre tbusuario com tbrequisicao
 -- Criando chave estrangeira na tbrequisao nas colunas do CoUsuario e CoSetor
 ALTER TABLE tbrequisicao ADD CONSTRAINT fk_tbusuariotbrequisicao FOREIGN KEY (CoUsuario) REFERENCES tbusuario(CoUsuario);
 ALTER TABLE tbrequisicao ADD CONSTRAINT fk_tbsetortbrequisicao FOREIGN KEY(CoSetor) REFERENCES	tbsetor(CoSetor);
 ALTER TABLE tbprodutorequisicao ADD CONSTRAINT fk_tbprodutorequisicaotbrequisicao FOREIGN KEY(CoRequisicao) REFERENCES tbrequisicao(CoRequisicao);
 ALTER TABLE tbprodutorequisicao ADD CONSTRAINT fk_tbprodutorequisicaotbproduto FOREIGN KEY(CoProduto) REFERENCES tbproduto(CoProduto);
+
+-- Como alterar as estrutura das tabelas
+use dbestoque;
+ALTER TABLE tbproduto ADD estoque DATE;
+ALTER TABLE tbproduto RENAME COLUMN estoque to Estoque; -- primeira forma de alteração
+alter table tbproduto change estoque QtEstoque date; -- segunda forma de alteração
+ALTER TABLE tbproduto change QtEstoque QtEstoque int; -- alterando o tipo
+ALTER TABLE tbproduto drop QtEstoque; -- Excluir o campo QtEstoque
+DROP TABLE tbproduto; -- Apagar a tabela
+
