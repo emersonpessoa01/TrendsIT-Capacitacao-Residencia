@@ -1,6 +1,6 @@
 create database dbestoque;
 use dbestoque;
-
+-- INÍCIO DO DDL
 CREATE TABLE tbsetor (
     CoSetor INT NOT NULL AUTO_INCREMENT,
     NoSetor VARCHAR(50),
@@ -52,12 +52,36 @@ ALTER TABLE tbrequisicao ADD CONSTRAINT fk_tbsetortbrequisicao FOREIGN KEY(CoSet
 ALTER TABLE tbprodutorequisicao ADD CONSTRAINT fk_tbprodutorequisicaotbrequisicao FOREIGN KEY(CoRequisicao) REFERENCES tbrequisicao(CoRequisicao);
 ALTER TABLE tbprodutorequisicao ADD CONSTRAINT fk_tbprodutorequisicaotbproduto FOREIGN KEY(CoProduto) REFERENCES tbproduto(CoProduto);
 
--- Como alterar as estrutura das tabelas
+-- Como alterar as estrutura das tabelas 
 use dbestoque;
 ALTER TABLE tbproduto ADD estoque DATE;
 ALTER TABLE tbproduto RENAME COLUMN estoque to Estoque; -- primeira forma de alteração
 alter table tbproduto change estoque QtEstoque date; -- segunda forma de alteração
 ALTER TABLE tbproduto change QtEstoque QtEstoque int; -- alterando o tipo
 ALTER TABLE tbproduto drop QtEstoque; -- Excluir o campo QtEstoque
+ALTER TABLE tbusuario drop NuCPF;
 DROP TABLE tbproduto; -- Apagar a tabela
 
+-- INÍCIO DO DML
+INSERT INTO tbusuario(CoUsuario,NoUsuario)
+values(14780,"Pascal");
+
+SELECT * from tbusuario;
+
+INSERT INTO	tbsetor(CoSetor,NoSetor) 
+VALUES(3,"Recursos Humanos");
+SELECT * from tbsetor;
+
+INSERT INTO tbrequisicao (CoRequisicao, DaRequisicao, CoUsuario, CoSetor)
+VALUES (1200,'1890-03-22',14780,3);
+SELECT * from tbrequisicao;
+
+INSERT INTO tbproduto(CoProduto,NoProduto)
+VALUES
+(15,'Lapis Grafite'),
+(3,'Caneta Azul'),
+(9,'Caneta Preta'),
+(45,'CAneta Vermelha'),
+(33,'Resma de Papel');
+
+SELECT * FROM tbproduto;
