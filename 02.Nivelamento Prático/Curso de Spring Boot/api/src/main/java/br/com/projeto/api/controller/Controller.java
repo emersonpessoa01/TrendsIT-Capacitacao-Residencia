@@ -1,6 +1,8 @@
 package br.com.projeto.api.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import br.com.projeto.api.repository.Repository;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,6 +12,8 @@ import br.com.projeto.api.Model.Pessoa;
 
 @RestController
 public class Controller {
+    @Autowired // injeção de dependência que precisa mais instanciar métodos
+    private Repository repository; //Irá conter as ações do banco de dados:cadastrar, deletar, atualizar e listar 
 
     @GetMapping("/")
     public String hello() {
