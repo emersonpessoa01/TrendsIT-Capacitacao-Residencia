@@ -15,17 +15,22 @@ public class Controller {
     @Autowired // injeção de dependência que precisa mais instanciar métodos
     private Repository repository; //Irá conter as ações do banco de dados:cadastrar, deletar, atualizar e listar 
 
+    //Método para rota de cadastro
+    @PostMapping("/api")
+    public Pessoa cadastrar(@RequestBody Pessoa pessoa) {
+        return repository.save(pessoa);
+    }
     @GetMapping("/")
     public String hello() {
         return "Hello World!";
     }
 
-    @GetMapping("/jungle")
+    @GetMapping("/welcome")
     public String helloJungle() {
         /* Concatenar nome */
         return "Welcome to the jungle";
     }
-    @GetMapping("/jungle/{nome}")
+    @GetMapping("/welcome/{nome}")
     public String helloJungle(@PathVariable String nome) {
         /* Concatenar nome */
         return "Welcome to the jungle, " + nome + "!";
