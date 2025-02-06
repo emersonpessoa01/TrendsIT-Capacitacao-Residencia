@@ -1,5 +1,7 @@
 package br.com.projeto.api.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import br.com.projeto.api.repository.Repository;
@@ -9,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.projeto.api.Model.Pessoa;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 public class Controller {
@@ -20,11 +24,19 @@ public class Controller {
     public Pessoa cadastrar(@RequestBody Pessoa pessoa) {
         return repository.save(pessoa);
     }
+    
     @GetMapping("/")
     public String hello() {
         return "Hello World!";
     }
-
+    @GetMapping("/api")
+    public List<Pessoa> selecionar() {
+        return repository.findAll();
+    }
+    public String getMethodName(@RequestParam String param) {
+        return new String();
+    }
+    
     @GetMapping("/welcome")
     public String helloJungle() {
         /* Concatenar nome */
@@ -36,10 +48,10 @@ public class Controller {
         return "Welcome to the jungle, " + nome + "!";
     }
     /* Vincular classe Pessoa com a Controller */
-    @PostMapping("/pessoa") //Responsável por exibir um nome e idade
-    public Pessoa pessoa(@RequestBody Pessoa p){
-       return p;
-    } 
+    // @PostMapping("/api/pessoa") //Responsável por exibir um nome e idade
+    // public Pessoa pessoa(@RequestBody Pessoa p){
+    //    return p;
+    // } 
     
 
 }
