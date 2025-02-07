@@ -3,6 +3,7 @@ package br.com.projeto.api.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import br.com.projeto.api.repository.Repository;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -40,6 +41,14 @@ public class Controller {
     @PutMapping("/api")
     public Pessoa atualizar(@RequestBody Pessoa pessoa){
         return repository.save(pessoa);
+    }
+
+    // método para rota de exclusão de todo 
+    @DeleteMapping("/api/{codigo}")
+    public void excluir(@PathVariable int codigo){
+        Pessoa pessoa = selecionarPeloCodigo(codigo);
+        repository.delete(pessoa);
+        // repository.deleteById(codigo);
     }
 
     @GetMapping("/")
