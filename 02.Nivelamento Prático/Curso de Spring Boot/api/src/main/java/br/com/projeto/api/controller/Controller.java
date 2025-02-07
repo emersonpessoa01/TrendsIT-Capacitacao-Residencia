@@ -7,15 +7,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import br.com.projeto.api.repository.Repository;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.projeto.api.Model.Pessoa;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 public class Controller {
-    @Autowired // injeção de dependência que precisa mais instanciar métodos
+    @Autowired // injeção de dependência que não precisa mais instanciar métodos
     private Repository repository; // Irá conter as ações do banco de dados:cadastrar, deletar, atualizar e listar
 
     // Método para rota de cadastro
@@ -23,16 +23,23 @@ public class Controller {
     public Pessoa cadastrar(@RequestBody Pessoa pessoa) {
         return repository.save(pessoa);
     }
+
     // Método para rota de listagem
     @GetMapping("/api")
     public List<Pessoa> selecionar() {
         return repository.findAll();
     }
 
-    // Método para rota de listar por id
+    // Método para rota de listagem por id
     @GetMapping("/api/{codigo}")
     public Pessoa selecionarPeloCodigo(@PathVariable int codigo) {
         return repository.findById(codigo).get();
+    }
+
+    // Método para rota de atualização de todo objeto
+    @PutMapping("/api")
+    public Pessoa atualizar(@RequestBody Pessoa pessoa){
+        return repository.save(pessoa);
     }
 
     @GetMapping("/")
@@ -40,13 +47,8 @@ public class Controller {
         return "Hello World!";
     }
 
-    public String getMethodName(@RequestParam String param) {
-        return new String();
-    }
-
     @GetMapping("/welcome")
     public String helloJungle() {
-        /* Concatenar nome */
         return "Welcome to the jungle";
     }
 
