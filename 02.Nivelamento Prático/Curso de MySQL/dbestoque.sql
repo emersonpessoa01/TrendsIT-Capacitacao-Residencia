@@ -92,10 +92,49 @@ VALUES (1, 15, 1200, 2),
 	   (3, 9, 1200, 2),
 	   (4, 45, 1200, 1),
 	   (5, 33, 1200, 1);
-SELECT * FROM tbprodutorequisicaoCoProduto;
-
--- Atualizar dados
+        
+-- Inserir dados
 SELECT * from tbusuario;
 ALTER TABLE tbusuario ADD COLUMN NuCPF CHAR(11); -- Adicionando campo estoque do tipo DATE
 INSERT INTO tbusuario(CoUsuario,NoUsuario,NuCPF)
 VALUES(102030,'Turing',12345678901);
+
+-- Atualizar dados
+UPDATE tbusuario 
+SET 
+    NuCPF = 1020
+WHERE
+    CoUsuario = 14780;	
+
+SELECT * FROM tbprodutorequisicao;
+SELECT Quantidade FROM tbprodutorequisicao;
+SELECT * FROM tbprodutorequisicao WHERE Quantidade < 2;
+
+-- Modiifcar quantidade de produtos de requisiçaõ que possuem valores abaixo de 2
+UPDATE tbprodutorequisicao 
+SET 
+    Quantidade = 5
+WHERE
+    Quantidade < 2
+        AND IdProdutoRequisicao IN (4 , 5);
+-- Outra forma de atualizar   
+UPDATE tbprodutorequisicao 
+SET 
+    Quantidade = 1
+WHERE
+    IdProdutoRequisicao >= 4
+        AND IdProdutoRequisicao <= 5;
+--  Outra forma de atualizar
+UPDATE tbprodutorequisicao 
+SET 
+    Quantidade = 5
+WHERE
+    IdProdutoRequisicao = 4
+        OR IdProdutoRequisicao = 5;
+--  Outra forma de atualizar
+UPDATE tbprodutorequisicao 
+SET 
+    Quantidade = 1
+WHERE
+    CoRequisicao = 1200 AND CoProduto = 33
+        OR CoProduto = 45;
