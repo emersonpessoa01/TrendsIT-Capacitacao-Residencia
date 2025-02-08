@@ -24,7 +24,7 @@ CREATE TABLE tbusuario (
 );
 
 -- Alterar nome do NoCPF 
-alter table tbusuario rename column NoCPF to NuCPF;CoSetor
+alter table tbusuario rename column NoCPF to NuCPF;
 
 CREATE TABLE tbrequisicao (
     CoRequisicao INT NOT NULL AUTO_INCREMENT,
@@ -54,12 +54,12 @@ ALTER TABLE tbprodutorequisicao ADD CONSTRAINT fk_tbprodutorequisicaotbproduto F
 
 -- Como alterar as estrutura das tabelas 
 use dbestoque;
-ALTER TABLE tbproduto ADD estoque DATE;
+ALTER TABLE tbproduto ADD estoque DATE; 
 ALTER TABLE tbproduto RENAME COLUMN estoque to Estoque; -- primeira forma de alteração
 alter table tbproduto change estoque QtEstoque date; -- segunda forma de alteração
 ALTER TABLE tbproduto change QtEstoque QtEstoque int; -- alterando o tipo
 ALTER TABLE tbproduto drop QtEstoque; -- Excluir o campo QtEstoque
-ALTER TABLE tbusuario drop NuCPF;
+ALTER TABLE tbusuario drop NuCPF; -- Excluir o campo NuCPF
 DROP TABLE tbproduto; -- Apagar a tabela
 
 -- INÍCIO DO DML
@@ -85,3 +85,17 @@ VALUES
 (33,'Resma de Papel');
 
 SELECT * FROM tbproduto;
+-- Inserir dados
+INSERT INTO tbprodutorequisicao (IdProdutoRequisicao,CoProduto,CoRequisicao,Quantidade)
+VALUES (1, 15, 1200, 2),
+	   (2, 3, 1200, 3),
+	   (3, 9, 1200, 2),
+	   (4, 45, 1200, 1),
+	   (5, 33, 1200, 1);
+SELECT * FROM tbprodutorequisicaoCoProduto;
+
+-- Atualizar dados
+SELECT * from tbusuario;
+ALTER TABLE tbusuario ADD COLUMN NuCPF CHAR(11); -- Adicionando campo estoque do tipo DATE
+INSERT INTO tbusuario(CoUsuario,NoUsuario,NuCPF)
+VALUES(102030,'Turing',12345678901);
