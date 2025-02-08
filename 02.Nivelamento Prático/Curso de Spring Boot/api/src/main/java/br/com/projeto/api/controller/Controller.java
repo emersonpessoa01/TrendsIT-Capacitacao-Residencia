@@ -50,6 +50,11 @@ public class Controller {
         repository.delete(pessoa);
         // repository.deleteById(codigo);
     }
+    // Contar registros com o comando count()
+    @GetMapping("/api/contador")
+    public long contador(){
+        return repository.count();
+    }
 
     @GetMapping("/")
     public String hello() {
