@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.projeto.api.Model.Pessoa;
+import br.com.projeto.api.model.Pessoa;
 
 @RestController
 public class Controller {
@@ -57,11 +57,16 @@ public class Controller {
         return repository.count();
 
     }
-    
+
     // Ordenar registro pelo nome com o comando orderBy
-    @GetMapping("/api/ordenarNomes")
-    public List<Pessoa> ordernarNomes(){
+    @GetMapping("/api/ordenarNomesDesc")
+    public List<Pessoa> ordernarNomes() {
         return repository.findByOrderByNomeDesc();
+    }
+
+    @GetMapping("/api/ordenarNomeIdade")
+    public List<Pessoa> ordernarNomesIdade() {
+        return repository.findByNomeOrderByIdadeDesc("Patriiciah");
     }
 
     @GetMapping("/")

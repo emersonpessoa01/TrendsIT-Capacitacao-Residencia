@@ -1,4 +1,5 @@
-package br.com.projeto.api.Model;
+
+package br.com.projeto.api.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
