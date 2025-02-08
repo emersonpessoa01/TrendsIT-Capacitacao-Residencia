@@ -39,21 +39,29 @@ public class Controller {
 
     // Método para rota de atualização de todo objeto
     @PutMapping("/api")
-    public Pessoa atualizar(@RequestBody Pessoa pessoa){
+    public Pessoa atualizar(@RequestBody Pessoa pessoa) {
         return repository.save(pessoa);
     }
 
-    // método para rota de exclusão de todo 
+    // método para rota de exclusão de todo
     @DeleteMapping("/api/{codigo}")
-    public void excluir(@PathVariable int codigo){
+    public void excluir(@PathVariable int codigo) {
         Pessoa pessoa = selecionarPeloCodigo(codigo);
         repository.delete(pessoa);
         // repository.deleteById(codigo);
     }
+
     // Contar registros com o comando count()
     @GetMapping("/api/contador")
-    public long contador(){
+    public long contador() {
         return repository.count();
+
+    }
+    
+    // Ordenar registro pelo nome com o comando orderBy
+    @GetMapping("/api/ordenarNomes")
+    public List<Pessoa> ordernarNomes(){
+        return repository.findByOrderByNomeDesc();
     }
 
     @GetMapping("/")
