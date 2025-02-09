@@ -63,10 +63,15 @@ public class Controller {
     public List<Pessoa> ordernarNomes() {
         return repository.findByOrderByNomeDesc();
     }
-
+    // Ordenar registro pelo nome ordenado pela idade com o comando orderBy
     @GetMapping("/api/ordenarNomeIdade")
     public List<Pessoa> ordernarNomesIdade() {
         return repository.findByNomeOrderByIdadeDesc("Patriiciah");
+    }
+    //Filtrar dados pelo nome com o comando containing(Como se fosse um like)
+    @GetMapping("/api/nomeContem")
+    public List<Pessoa> nomeContem(){
+        return repository.findByNomeContaining("triiciah");
     }
 
     @GetMapping("/")

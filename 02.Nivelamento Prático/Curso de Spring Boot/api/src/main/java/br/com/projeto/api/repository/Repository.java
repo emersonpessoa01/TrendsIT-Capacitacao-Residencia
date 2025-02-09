@@ -13,5 +13,6 @@ public interface Repository extends JpaRepository<Pessoa, Integer> {
     // List<Pessoa> findByOrderByNome();
     List<Pessoa> findByOrderByNomeDesc();
     List<Pessoa> findByNomeOrderByIdadeDesc(String nome);
+    List<Pessoa> findByNomeContaining(String termo);
 // }
 }
