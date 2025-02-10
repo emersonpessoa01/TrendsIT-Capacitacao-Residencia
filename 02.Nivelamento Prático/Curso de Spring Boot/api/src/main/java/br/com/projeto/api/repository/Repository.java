@@ -14,5 +14,7 @@ public interface Repository extends JpaRepository<Pessoa, Integer> {
     List<Pessoa> findByOrderByNomeDesc();
     List<Pessoa> findByNomeOrderByIdadeDesc(String nome);
     List<Pessoa> findByNomeContaining(String termo);
+    List<Pessoa> findByNomeStartsWith(String termo);
+    List<Pessoa> findByNomeEndsWith(String termo);
 // }
 }
