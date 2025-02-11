@@ -84,7 +84,11 @@ public class Controller {
 
     @GetMapping("/api/terminaCom")
     public List<Pessoa> terminaCom() {
-        return repository.findByNomeEndsWith("ciah");
+        return repository.findByNomeEndsWith("a");
+    }
+    @GetMapping("/api/somaIdades")
+    public int somaIdades() {
+        return repository.somaIdades();
     }
 
     @GetMapping("/")
