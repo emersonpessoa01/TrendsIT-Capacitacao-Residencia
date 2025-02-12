@@ -19,9 +19,13 @@ public interface Repository extends JpaRepository<Pessoa, Integer> {
     List<Pessoa> findByNomeStartsWith(String termo);
     List<Pessoa> findByNomeEndsWith(String termo);
 
-    // Criar o o próprio sql com @query
+    // Criar o próprio sql com @query
     @Query(value="SELECT SUM(idade) FROM pessoas",nativeQuery = true)
     int somaIdades();
+
+    // Listar pessoas com idade acima de 18 anos ou igual/maior que uma determinada idade
+    @Query(value="SELECT * FROM pessoas WHERE idade >= :idade",nativeQuery = true)
+    List<Pessoa> idadeMaiorIgual(int idade);
 
 // }
 }

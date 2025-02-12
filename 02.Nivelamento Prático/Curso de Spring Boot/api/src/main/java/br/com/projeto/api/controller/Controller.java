@@ -90,6 +90,10 @@ public class Controller {
     public int somaIdades() {
         return repository.somaIdades();
     }
+    @GetMapping("/api/idadeMaiorIgual/{idade}")
+    public List<Pessoa> idadeMaioreIgual(@PathVariable int idade) {
+        return repository.idadeMaiorIgual(idade);
+    }
 
     @GetMapping("/")
     public String hello() {
