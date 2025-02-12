@@ -81,15 +81,17 @@ public class Controller {
     public List<Pessoa> iniciaCom() {
         return repository.findByNomeStartsWith("Patri");
     }
-
+    // Filtrar dados pelo nome com o comando endWith
     @GetMapping("/api/terminaCom")
     public List<Pessoa> terminaCom() {
         return repository.findByNomeEndsWith("a");
     }
+    // Somar idades
     @GetMapping("/api/somaIdades")
     public int somaIdades() {
         return repository.somaIdades();
     }
+    // Filtrar dados pela idade com o comando idadeMaiorIgual
     @GetMapping("/api/idadeMaiorIgual/{idade}")
     public List<Pessoa> idadeMaioreIgual(@PathVariable int idade) {
         return repository.idadeMaiorIgual(idade);
