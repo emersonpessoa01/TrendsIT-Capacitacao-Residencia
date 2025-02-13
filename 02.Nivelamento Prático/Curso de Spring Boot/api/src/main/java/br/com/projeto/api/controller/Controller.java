@@ -3,6 +3,8 @@ package br.com.projeto.api.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import br.com.projeto.api.repository.Repository;
@@ -117,5 +119,17 @@ public class Controller {
     // public Pessoa pessoa(@RequestBody Pessoa p){
     // return p;
     // }
+    // ResponseEntity é um objeto que contém o status da requisição
+    // @GetMapping("/status")
+    // public String status(){
+    //     return "Configurando Status";
+    // }
+    
+    // ResponseEntity é um objeto que contém o status da requisição
+    @GetMapping("/status")
+    public ResponseEntity<?> status(){
+        return ResponseEntity.ok("Configurando Status");
+        // return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
 
 }
