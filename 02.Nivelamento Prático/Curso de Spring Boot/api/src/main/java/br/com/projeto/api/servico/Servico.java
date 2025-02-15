@@ -19,6 +19,7 @@ public class Servico {
     @Autowired
     private ServicoRepository repository;
 
+    // Método para cadastrar pessoa
     public ResponseEntity<?> cadastrar(Pessoa pessoa) {
 
         if (pessoa.getNome().equals("")) {
@@ -33,4 +34,9 @@ public class Servico {
             return new ResponseEntity<>(repository.save(pessoa),HttpStatus.CREATED);
         }
     }
+    // Método para listar pessoas
+    public ResponseEntity<?> selecionar(){
+        return new ResponseEntity<>(repository.findAll(),HttpStatus.OK);
+    }
+    // Método para listar pessoas por id
 }

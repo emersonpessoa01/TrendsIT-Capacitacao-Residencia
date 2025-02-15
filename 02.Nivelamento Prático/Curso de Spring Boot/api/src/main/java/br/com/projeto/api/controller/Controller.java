@@ -34,8 +34,11 @@ public class Controller {
 
     // Método para rota de listagem
     @GetMapping("/api")
-    public List<Pessoa> selecionar() {
-        return repository.findAll();
+    // public List<Pessoa> selecionar() {
+    //     return repository.findAll();
+    // }
+    public ResponseEntity<?> selecionar() {
+        return servico.selecionar();
     }
 
     // Método para rota de listagem por id
