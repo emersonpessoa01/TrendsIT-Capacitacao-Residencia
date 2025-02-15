@@ -7,7 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import br.com.projeto.api.repository.Repository;
+import br.com.projeto.api.repository.ServicoRepository;
+import br.com.projeto.api.servico.Servico;
+
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -19,12 +21,15 @@ import br.com.projeto.api.model.Pessoa;
 @RestController
 public class Controller {
     @Autowired // injeção de dependência que não precisa mais instanciar métodos
-    private Repository repository; // Irá conter as ações do banco de dados:cadastrar, deletar, atualizar e listar
+    private ServicoRepository repository; // Irá conter as ações do banco de dados:cadastrar, deletar, atualizar e listar
 
+    @Autowired
+    private Servico servico; 
     // Método para rota de cadastro
     @PostMapping("/api")
-    public Pessoa cadastrar(@RequestBody Pessoa pessoa) {
-        return repository.save(pessoa);
+    public ResponseEntity<?> cadastrar(@RequestBody Pessoa pessoa) {
+        // return repository.save(pessoa);
+        return servico.cadastrar(pessoa);
     }
 
     // Método para rota de listagem

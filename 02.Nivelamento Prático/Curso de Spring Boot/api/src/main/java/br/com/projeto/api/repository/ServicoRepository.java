@@ -5,11 +5,15 @@ import java.util.List;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.Query;
 
 import br.com.projeto.api.model.Pessoa;
-
-public interface Repository extends JpaRepository<Pessoa, Integer> {
+//O repository é responsável por fazer a conexão com o banco de dados
+//O JpaRepository é uma interface que já possui métodos prontos para serem utilizados
+// O jpaRepository é uma interface possui as ações básicas do banco de dados: cadastrar, selecionar, alterar e excluir
+@Repository
+public interface ServicoRepository extends JpaRepository<Pessoa, Integer> {
     // List<Pessoa> findAll();
     // Pessoa findById(int codigo);
     // List<Pessoa> findByOrderByNome();
