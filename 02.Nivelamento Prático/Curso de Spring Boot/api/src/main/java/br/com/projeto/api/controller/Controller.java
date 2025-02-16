@@ -42,9 +42,13 @@ public class Controller {
     }
 
     // Método para rota de listagem por id
+    // @GetMapping("/api/{codigo}")
+    // public Pessoa selecionarPeloCodigo(@PathVariable int codigo) {
+    //     return repository.findById(codigo).orElse(null);
+    // }
     @GetMapping("/api/{codigo}")
-    public Pessoa selecionarPeloCodigo(@PathVariable int codigo) {
-        return repository.findById(codigo).get();
+    public ResponseEntity<?> selecionarPeloCodigo(@PathVariable int codigo) {
+        return servico.selecionarPeloCodigo(codigo);
     }
 
     // Método para rota de atualização de todo objeto

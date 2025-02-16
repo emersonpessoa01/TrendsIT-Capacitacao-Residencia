@@ -22,6 +22,7 @@ public interface ServicoRepository extends JpaRepository<Pessoa, Integer> {
     List<Pessoa> findByNomeContaining(String termo);
     List<Pessoa> findByNomeStartsWith(String termo);
     List<Pessoa> findByNomeEndsWith(String termo);
+    Pessoa findByCodigo(int codigo);
 
     // Criar o próprio sql com @query
     @Query(value="SELECT SUM(idade) FROM pessoas",nativeQuery = true)
@@ -30,6 +31,9 @@ public interface ServicoRepository extends JpaRepository<Pessoa, Integer> {
     // Listar pessoas com idade acima de 18 anos ou igual/maior que uma determinada idade
     @Query(value="SELECT * FROM pessoas WHERE idade >= :idade",nativeQuery = true)
     List<Pessoa> idadeMaiorIgual(int idade);
+
+    // Validar uma pessoa pelo código dentro do banco de dados
+    int countByCodigo(int codigo);
 
 // }
 }
