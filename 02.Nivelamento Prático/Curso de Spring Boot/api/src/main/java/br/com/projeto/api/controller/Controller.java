@@ -67,10 +67,15 @@ public class Controller {
     // método para rota de exclusão de todo
     // @DeleteMapping("/api/{codigo}")
     // public void excluir(@PathVariable int codigo) {
-    //     Pessoa pessoa = selecionarPeloCodigo(codigo);
+    //     Pessoa pessoa = repository.findById(codigo).orElse(null);
     //     repository.delete(pessoa);
     //     // repository.deleteById(codigo);
     // }
+    @DeleteMapping("/api/{codigo}")
+    public ResponseEntity<?> remover(@PathVariable int codigo) {
+        return servico.remover(codigo);
+        // return ResponseEntity.ok().build();
+    }
 
     // Contar registros com o comando count()
     @GetMapping("/api/contador")

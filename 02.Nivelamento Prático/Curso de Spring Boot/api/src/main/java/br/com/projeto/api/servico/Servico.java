@@ -40,28 +40,43 @@ public class Servico {
 
     // Método para selecionar pessoa pelo código
     public ResponseEntity<?> selecionarPeloCodigo(int codigo) {
-        if(repository.countByCodigo(codigo)== 0){
+        if (repository.countByCodigo(codigo) == 0) {
             mensagem.setMensagem("Não foi encontrada nenhuma pessoa");
-            return new ResponseEntity<>(mensagem,HttpStatus.BAD_REQUEST);
-        }else{
+            return new ResponseEntity<>(mensagem, HttpStatus.BAD_REQUEST);
+        } else {
             return new ResponseEntity<>(repository.findByCodigo(codigo), HttpStatus.OK);
         }
     }
+
     // Método para editar dados
-    public ResponseEntity<?> editar(Pessoa pessoa){
-        //Será procurado alguém com o código 
-        if(repository.countByCodigo(pessoa.getCodigo())==0){
+    public ResponseEntity<?> editar(Pessoa pessoa) {
+        // Será procurado alguém com o código
+        if (repository.countByCodigo(pessoa.getCodigo()) == 0) {
             mensagem.setMensagem("O código informado não existe");
             return new ResponseEntity<>(mensagem, HttpStatus.NOT_FOUND);
-        }else if(pessoa.getNome().equals("")){
+        } else if (pessoa.getNome().equals("")) {
             mensagem.setMensagem("É necessário informar um nome");
             return new ResponseEntity<>(mensagem, HttpStatus.BAD_REQUEST);
-        }else if(pessoa.getIdade()<0){
+        } else if (pessoa.getIdade() < 0) {
             mensagem.setMensagem("Informe uma idade válida");
             return new ResponseEntity<>(mensagem, HttpStatus.BAD_REQUEST);
+        } else {
+            return new ResponseEntity<>(repository.save(pessoa), HttpStatus.OK);
         }
-        else{
-            return new ResponseEntity<>(repository.save(pessoa),HttpStatus.OK);
+    }
+
+    // Método para deletar pessoa
+    public ResponseEntity<?>remover(int codigo){
+        if(repository.countByCodigo(codigo)==0){
+            mensagem.setMensagem("O código informado não existe");
+            return new ResponseEntity<>(mensagem, HttpStatus.NOT_FOUND);
+        }else{
+            Pessoa pessoa =repository.findByCodigo(codigo);
+            repository.delete(pessoa);
+
+            //Efetuar um feedaback
+            mensagem.setMensagem("Pessoa removida com sucesso");
+            return new ResponseEntity<>(mensagem, HttpStatus.OK);
         }
     }
 
