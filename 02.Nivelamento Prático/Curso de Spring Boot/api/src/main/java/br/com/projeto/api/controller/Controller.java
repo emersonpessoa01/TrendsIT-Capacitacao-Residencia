@@ -27,6 +27,9 @@ public class Controller {
     private Servico servico; 
     // Método para rota de cadastro
     @PostMapping("/api")
+    // public List<Pessoa> cadastrar(@RequestBody Pessoa pessoa) {
+    //     return repository.save(pessoa);
+    // }
     public ResponseEntity<?> cadastrar(@RequestBody Pessoa pessoa) {
         // return repository.save(pessoa);
         return servico.cadastrar(pessoa);
@@ -52,18 +55,22 @@ public class Controller {
     }
 
     // Método para rota de atualização de todo objeto
+    // @PutMapping("/api")
+    // public Pessoa editar(@RequestBody Pessoa pessoa) {
+    //     return repository.save(pessoa);
+    // }
     @PutMapping("/api")
-    public Pessoa atualizar(@RequestBody Pessoa pessoa) {
-        return repository.save(pessoa);
+    public ResponseEntity<?> editar(@RequestBody Pessoa pessoa) {
+        return servico.editar(pessoa);
     }
 
     // método para rota de exclusão de todo
-    @DeleteMapping("/api/{codigo}")
-    public void excluir(@PathVariable int codigo) {
-        Pessoa pessoa = selecionarPeloCodigo(codigo);
-        repository.delete(pessoa);
-        // repository.deleteById(codigo);
-    }
+    // @DeleteMapping("/api/{codigo}")
+    // public void excluir(@PathVariable int codigo) {
+    //     Pessoa pessoa = selecionarPeloCodigo(codigo);
+    //     repository.delete(pessoa);
+    //     // repository.deleteById(codigo);
+    // }
 
     // Contar registros com o comando count()
     @GetMapping("/api/contador")

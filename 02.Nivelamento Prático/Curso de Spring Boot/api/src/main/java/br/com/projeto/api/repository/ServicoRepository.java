@@ -14,7 +14,7 @@ import br.com.projeto.api.model.Pessoa;
 // O jpaRepository é uma interface possui as ações básicas do banco de dados: cadastrar, selecionar, alterar e excluir
 @Repository
 public interface ServicoRepository extends JpaRepository<Pessoa, Integer> {
-    // List<Pessoa> findAll();
+    List<Pessoa> findAll();
     // Pessoa findById(int codigo);
     // List<Pessoa> findByOrderByNome();
     List<Pessoa> findByOrderByNomeDesc();
