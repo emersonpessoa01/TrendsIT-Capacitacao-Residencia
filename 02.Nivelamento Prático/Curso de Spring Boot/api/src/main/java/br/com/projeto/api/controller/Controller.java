@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import br.com.projeto.api.repository.ServicoRepository;
 import br.com.projeto.api.servico.Servico;
+import jakarta.validation.Valid;
+import br.com.projeto.api.model.Cliente;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -121,6 +123,12 @@ public class Controller {
     @GetMapping("/api/idadeMaiorIgual/{idade}")
     public List<Pessoa> idadeMaioreIgual(@PathVariable int idade) {
         return repository.idadeMaiorIgual(idade);
+    }
+
+    @PostMapping("/cliente")
+    //Para que o validar o cliente, é necessário colocar o @Valid. Do contrário, o NotEmpty não funcionará.
+    public void cliente(@Valid @RequestBody Cliente cliente) {
+        
     }
 
     @GetMapping("/")
