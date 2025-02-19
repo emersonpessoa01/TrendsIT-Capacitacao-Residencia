@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 
 @Entity
@@ -17,7 +18,7 @@ public class Cliente {
     @NotEmpty(message = "Informe um nome")//Garante que o campo não seja nulo
     private String nome;
 
-    @NotEmpty(message = "Informe um e-mail válido") //Validação de email se tem @ e .
+    @Email(message = "Informe um e-mail válido") //Validação de email se tem @ e .
     private String email;
 
     //Os métodos get e set
