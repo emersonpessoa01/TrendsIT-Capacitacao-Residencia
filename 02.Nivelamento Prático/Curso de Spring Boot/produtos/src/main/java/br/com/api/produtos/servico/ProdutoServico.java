@@ -13,6 +13,8 @@ public class ProdutoServico {
     private ProdutoRepositorio produtoRepositorio;
 
     // Método para listar todos os produtos
+    //Iterable é uma interface que representa uma coleção de elementos.
+    //E toda lista que tem um tipo de dado que pode ser retornado
     public Iterable<ProdutoModelo> listar() {
         return produtoRepositorio.findAll();
     }
