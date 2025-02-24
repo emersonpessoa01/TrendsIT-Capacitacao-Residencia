@@ -30,7 +30,7 @@ public class ProdutoServico {
         if (produtoModelo.getNome().equals("")) {
             respostaModelo.setMensagem("O nome do produto é obrigatório!");
             return new ResponseEntity<RespostaModelo>(respostaModelo, HttpStatus.BAD_REQUEST);
-        } else if (produtoModelo.getMarca() == 0) {
+        } else if (produtoModelo.getMarca().equals("")) {
             respostaModelo.setMensagem("A marca do produto é obrigatória!");
             return new ResponseEntity<RespostaModelo>(respostaModelo, HttpStatus.BAD_REQUEST);
         } else {
