@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
@@ -27,5 +28,9 @@ public class ProdutoControle {
     @PostMapping("/cadastrar")
     public ResponseEntity<?> cadastrar(@RequestBody ProdutoModelo produtoModelo){
         return produtoServico.cadastrarAlterar(produtoModelo, "cadastrar");
+    }
+    @PutMapping("/editar")
+    public ResponseEntity<?> editar(@RequestBody ProdutoModelo produtoModelo){
+        return produtoServico.cadastrarAlterar(produtoModelo, "editar");
     }
 }
