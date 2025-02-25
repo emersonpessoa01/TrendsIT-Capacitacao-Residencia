@@ -1,0 +1,330 @@
+{
+    "info": {
+        "_postman_id": "c82a36e2-01e6-4f54-ad92-cbc3fe6535f6",
+        "name": "api_spring",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Adicionar um cliente(Validação)",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:8081/cliente",
+                    "path": [
+                        "cliente"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"nome\":\"emerson\",\n  \"email\":\"emerson@gmail.com\"\n}"
+                }
+            }
+        },
+        {
+            "name": "Listar todos clientes",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8081/cliente",
+                    "path": [
+                        "cliente"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081"
+                }
+            }
+        },
+        {
+            "name": "Deletar",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:8081/api/6",
+                    "path": [
+                        "api",
+                        "6"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081"
+                }
+            }
+        },
+        {
+            "name": "Editar",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://localhost:8081/api",
+                    "path": [
+                        "api"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n    \"codigo\": 17,\n    \"nome\": \"Patriiciah Santos - Minha Eterna Deusa\",\n    \"idade\": 49\n  }"
+                }
+            }
+        },
+        {
+            "name": "Listar por ID",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8081/api/12",
+                    "path": [
+                        "api",
+                        "12"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081"
+                }
+            }
+        },
+        {
+            "name": "Cadastrar usuário",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:8081/api",
+                    "path": [
+                        "api"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"nome\":\"Patriiciah - Minha Eterna Deusa\",\n  \"idade\":48\n}"
+                }
+            }
+        },
+        {
+            "name": "Configurando Status",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8081/status",
+                    "path": [
+                        "status"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081"
+                }
+            }
+        },
+        {
+            "name": "Idade Maior Igual",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8081/api/idadeMaiorIgual/29",
+                    "path": [
+                        "api",
+                        "idadeMaiorIgual",
+                        "29"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081"
+                }
+            }
+        },
+        {
+            "name": "idadeMaiorIgual18",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8081/api/idadeMaiorIgual/18",
+                    "path": [
+                        "api",
+                        "idadeMaiorIgual",
+                        "18"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081"
+                }
+            }
+        },
+        {
+            "name": "somar idades",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8081/api/somaIdades",
+                    "path": [
+                        "api",
+                        "somaIdades"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081"
+                }
+            }
+        },
+        {
+            "name": "termina Com",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8081/api/terminaCom",
+                    "path": [
+                        "api",
+                        "terminaCom"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081"
+                }
+            }
+        },
+        {
+            "name": "Inicia Com",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8081/api/iniciaCom",
+                    "path": [
+                        "api",
+                        "iniciaCom"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081"
+                }
+            }
+        },
+        {
+            "name": "Contem Nome",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8081/api/nomeContem",
+                    "path": [
+                        "api",
+                        "nomeContem"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081"
+                }
+            }
+        },
+        {
+            "name": "Ordenar por nomes decrescente",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8081/api/ordenarNomesDesc",
+                    "path": [
+                        "api",
+                        "ordenarNomesDesc"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081"
+                }
+            }
+        },
+        {
+            "name": "Contador",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8081/api/contador",
+                    "path": [
+                        "api",
+                        "contador"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081"
+                }
+            }
+        },
+        {
+            "name": "Alterar todos da coluna",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://localhost:8081/api",
+                    "path": [
+                        "api"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"codigo\":3,\n  \"nome\":\"Fernanda dos Santos Ferreira\",\n  \"idade\":28\n}"
+                }
+            }
+        }
+    ]
+}

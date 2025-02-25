@@ -20,13 +20,13 @@ public class ProdutoServico {
 
     // Método para listar todos os produtos
     // Iterable é uma interface que representa uma coleção de elementos.
-    // E toda lista que tem um tipo de dado que pode ser retornado
+    // E toda lista que tem um tipo de dado pode ser retornado
     public Iterable<ProdutoModelo> listar() {
         return produtoRepositorio.findAll();
     }
 
-    // Método para salvar um produto
-    public ResponseEntity<?> cadastrar(ProdutoModelo produtoModelo) {
+    // save() é um método para cadastar ou alterar um produto
+    public ResponseEntity<?> cadastrarAlterar(ProdutoModelo produtoModelo, String acao) {
         if (produtoModelo.getNome().equals("")) {
             respostaModelo.setMensagem("O nome do produto é obrigatório!");
             return new ResponseEntity<RespostaModelo>(respostaModelo, HttpStatus.BAD_REQUEST);
@@ -34,8 +34,13 @@ public class ProdutoServico {
             respostaModelo.setMensagem("A marca do produto é obrigatória!");
             return new ResponseEntity<RespostaModelo>(respostaModelo, HttpStatus.BAD_REQUEST);
         } else {
-            return new ResponseEntity<ProdutoModelo>(produtoRepositorio.save(produtoModelo), HttpStatus.CREATED);
+            if (acao.equals("cadastrar")) {
+                return new ResponseEntity<ProdutoModelo>(produtoRepositorio.save(produtoModelo), HttpStatus.CREATED);
+            } else {
+                return new ResponseEntity<ProdutoModelo>(produtoRepositorio.save(produtoModelo), HttpStatus.OK);
+
+            }
         }
-        
+
     }
 }

@@ -26,6 +26,6 @@ public class ProdutoControle {
     }
     @PostMapping("/cadastrar")
     public ResponseEntity<?> cadastrar(@RequestBody ProdutoModelo produtoModelo){
-        return produtoServico.cadastrar(produtoModelo);
+        return produtoServico.cadastrarAlterar(produtoModelo, "cadastrar");
     }
 }
