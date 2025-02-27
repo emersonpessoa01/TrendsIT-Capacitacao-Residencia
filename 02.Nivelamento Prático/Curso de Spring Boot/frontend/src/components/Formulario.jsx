@@ -2,9 +2,14 @@ import React from "react";
 
 const Formulario = () => {
   return (
-    <div>
-      <h1>Formulário</h1>
-    </div>
+    <form>
+      <input type="text" placeholder="Nome do produto" />
+      <input type="text" placeholder="Marca" />
+      <input type="button" value="Cadastrar" />
+      <input type="button" value="Alterar" />
+      <input type="button" value="Remover" />
+      <input type="button" value="Cancelar" />
+    </form>
   );
 };
 
