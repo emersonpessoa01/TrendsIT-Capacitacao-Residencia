@@ -1,5 +1,6 @@
 import Formulario from "./components/Formulario";
 import Tabela from "./components/Tabela";
+import "./App.css";
 
 function App() {
   return (

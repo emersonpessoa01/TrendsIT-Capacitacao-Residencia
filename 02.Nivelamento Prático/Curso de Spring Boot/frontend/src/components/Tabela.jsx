@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 
 const Tabela = () => {
   return (
-    <table>
+    <table className="table table-striped">
       <thead>
         <tr>
           <th>#</th>
@@ -20,7 +20,7 @@ const Tabela = () => {
         </tr>
       </tbody>
     </table>
-  )
-}
+  );
+};
 
-export default Tabela
+export default Tabela;
