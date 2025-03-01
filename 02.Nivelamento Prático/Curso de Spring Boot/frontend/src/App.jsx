@@ -4,6 +4,12 @@ import Tabela from "./components/Tabela";
 import "./App.css";
 
 function App() {
+  //Objeto produto
+  const produto={
+    codigo:0,
+    nome: "",
+    marca: ""
+  }
   const [btnCadastrar, setBtnCadastrar] = useState(true);
   const [produtos, setProdutos] = useState([]);
 

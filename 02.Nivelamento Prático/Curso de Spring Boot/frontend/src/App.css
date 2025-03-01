@@ -30,7 +30,16 @@ input[type="button"]{
   max-width: 500px;
   width: 100%;
   margin: 20px auto;
+  
+  
 }
+/* adiciona sombra  */
+
+.table-responsive tbody{
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+
 @media (max-width: 480px) {
   form input{
     flex-direction: column;
