@@ -1,25 +1,31 @@
 import React from "react";
 
-const Tabela = () => {
+const Tabela = ({ vetor }) => {
   return (
-    <table className="table table-striped">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Nome</th>
-          <th>Marca</th>
-          <th>Selecionar</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
+    <div className="table-responsive">
+      <table className="table table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Marca</th>
+            <th>Selecionar</th>
+          </tr>
+        </thead>
+        <tbody>
+          {vetor.map(({ nome, marca }, index) => (
+            <tr key={index}>
+              <td>{index + 1}</td>
+              <td>{nome}</td>
+              <td>{marca}</td>
+              <td>
+                <button className="btn btn-success">Selecionar</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
