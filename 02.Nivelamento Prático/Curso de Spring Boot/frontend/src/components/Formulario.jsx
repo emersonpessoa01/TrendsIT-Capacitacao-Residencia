@@ -1,10 +1,10 @@
 import React from "react";
 
-const Formulario = ({ botao }) => {
+const Formulario = ({ botao, eventoTeclado }) => {
   return (
     <form>
-      <input autoFocus type="text" placeholder="Nome do produto" className="form-control" />
-      <input type="text" placeholder="Marca" className="form-control" />
+      <input autoFocus type="text" placeholder="Nome do produto" className="form-control" onChange={eventoTeclado} name="nome" />
+      <input type="text" placeholder="Marca" className="form-control" onChange={eventoTeclado} name="marca" />
       {botao ? (
         <input type="button" value="Cadastrar" className="btn btn-primary" />
       ) : (

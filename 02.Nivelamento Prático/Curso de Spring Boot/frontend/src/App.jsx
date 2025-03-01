@@ -5,13 +5,14 @@ import "./App.css";
 
 function App() {
   //Objeto produto
-  const produto={
-    codigo:0,
+  const produto = {
+    codigo: 0,
     nome: "",
-    marca: ""
-  }
+    marca: "",
+  };
   const [btnCadastrar, setBtnCadastrar] = useState(true);
   const [produtos, setProdutos] = useState([]);
+  const [objProduto, setObjProduto] = useState(produto);
 
   useEffect(() => {
     // fetch("http://localhost:8081/listar")
@@ -24,16 +25,25 @@ function App() {
       const response = await fetch("http://localhost:8081/listar");
       const data = await response.json();
       setProdutos(data);
-      console.log(data);
+      // console.log(data);
     };
     fetchData();
   }, []);
+
+  // Obtendo dados do formulário
+  const obterDados = (e) => {
+    // console.log(`${e.target.name}: ${ e.target.value}`);
+    setObjProduto({ 
+      ...objProduto, 
+      [e.target.name]: e.target.value });
+  };
 
   return (
     <div>
       <h1>Produtos</h1>
       {/* <p>{JSON.stringify(produtos)}</p> */}
-      <Formulario botao={btnCadastrar} />
+      {/* <p>{JSON.stringify(objProduto)}</p> */}
+      <Formulario botao={btnCadastrar} eventoTeclado={obterDados} />
       <Tabela vetor={produtos} />
     </div>
   );
