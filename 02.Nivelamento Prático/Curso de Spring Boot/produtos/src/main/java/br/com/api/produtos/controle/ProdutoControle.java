@@ -36,17 +36,17 @@ public class ProdutoControle {
         return "API de produtos funcionando!";
     }
 
-    // @PostMapping("/cadastrar")
-    // public ResponseEntity<?> cadastrar(@RequestBody ProdutoModelo produtoModelo){
-    // return produtoServico.cadastrarAlterar(produtoModelo, "cadastrar");
-    // }
     @PostMapping("/cadastrar")
-    public ResponseEntity<?> cadastrar(@RequestBody List<ProdutoModelo> produtoModelo) {
-        for (ProdutoModelo produto : produtoModelo) {
-            produtoServico.cadastrarAlterar(produto, "cadastrar");
-        }
-        return ResponseEntity.ok("Produtos cadastrados com sucesso!");
+    public ResponseEntity<?> cadastrar(@RequestBody ProdutoModelo produtoModelo){
+    return produtoServico.cadastrarAlterar(produtoModelo, "cadastrar");
     }
+    // @PostMapping("/cadastrar")
+    // public ResponseEntity<?> cadastrar(@RequestBody List<ProdutoModelo> produtoModelo) {
+    //     for (ProdutoModelo produto : produtoModelo) {
+    //         produtoServico.cadastrarAlterar(produto, "cadastrar");
+    //     }
+    //     return ResponseEntity.ok("Produtos cadastrados com sucesso!");
+    // }
 
     @PutMapping("/editar")
     public ResponseEntity<?> editar(@RequestBody ProdutoModelo produtoModelo) {

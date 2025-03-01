@@ -6,15 +6,16 @@ import "./App.css";
 function App() {
   //Objeto produto
   const produto = {
-    codigo: 0,
+    codigo: "",
     nome: "",
     marca: "",
   };
-  const [btnCadastrar, setBtnCadastrar] = useState(true);
-  const [produtos, setProdutos] = useState([]);
-  const [objProduto, setObjProduto] = useState(produto);
+  const [btnCadastrar, setBtnCadastrar] = useState(true); //Para mostrar ou não o botão de cadastrar
+  const [produtos, setProdutos] = useState([]); //Para mostrar os produtos
+  const [objProduto, setObjProduto] = useState(produto); // Para capturar os dados do formulário
 
   useEffect(() => {
+    //Executar uma única vez queando o componente é montado
     // fetch("http://localhost:8081/listar")
     //   .then((response) => response.json())
     //   .then((data) => {
@@ -33,17 +34,38 @@ function App() {
   // Obtendo dados do formulário
   const obterDados = (e) => {
     // console.log(`${e.target.name}: ${ e.target.value}`);
-    setObjProduto({ 
-      ...objProduto, 
-      [e.target.name]: e.target.value });
+    setObjProduto({
+      ...objProduto,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  //Função para cadastrar produto
+  const cadastrar = async () => {
+    const header = {
+      method: "POST",
+      body: JSON.stringify(objProduto),
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    };
+    try {
+      const response = await fetch("http://localhost:8081/cadastrar", header);
+
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error("Erro ao cadastrar:", error);
+    }
   };
 
   return (
     <div>
       <h1>Produtos</h1>
-      {/* <p>{JSON.stringify(produtos)}</p> */}
-      {/* <p>{JSON.stringify(objProduto)}</p> */}
-      <Formulario botao={btnCadastrar} eventoTeclado={obterDados} />
+      {/* <p>{JSON.stringify(produtos)}</p> */} {/* Para mostar os dados do array */}
+      {/* <p>{JSON.stringify(objProduto)}</p> */} {/* Para testar se está capturando os dados do formulário */}
+      <Formulario botao={btnCadastrar} eventoTeclado={obterDados} cadastrar={cadastrar} />
       <Tabela vetor={produtos} />
     </div>
   );
