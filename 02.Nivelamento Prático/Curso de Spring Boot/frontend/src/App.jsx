@@ -21,12 +21,17 @@ function App() {
     //   .then((data) => {
     //     setpProdutos(data);
     //   });
-    //Usar async await
+    //Usar async await com try/catch
+
     const fetchData = async () => {
-      const response = await fetch("http://localhost:8081/listar");
-      const data = await response.json();
-      setProdutos(data);
-      // console.log(data);
+      try {
+        const response = await fetch("http://localhost:8081/listar");
+        const data = await response.json();
+        setProdutos(data);
+        // console.log(data);
+      } catch (error) {
+        console.log("Falha ao buscar dados:", error);
+      }
     };
     fetchData();
   }, []);
