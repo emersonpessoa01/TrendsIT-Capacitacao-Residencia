@@ -59,6 +59,17 @@ function App() {
       const response = await fetch("http://localhost:8081/cadastrar", header);
 
       const data = await response.json();
+      //condição para mostrar a alteração da tabela dinamicamente
+      // if (data.status === "ok") {
+      //   setProdutos([...produtos, data.produto]);
+      // }
+      //Condição para mostrar os produtos cadastrados dinamicamente
+      if(data.mensagem !== undefined){
+        alert(data.mensagem);
+      }else{
+        setProdutos([...produtos, data]);
+        alert("Produto cadastrado com sucesso!");
+      }
       console.log(data);
     } catch (error) {
       console.error("Erro ao cadastrar:", error);

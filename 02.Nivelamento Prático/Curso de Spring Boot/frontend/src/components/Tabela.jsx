@@ -13,11 +13,11 @@ const Tabela = ({ vetor }) => {
           </tr>
         </thead>
         <tbody>
-          {vetor.map(({ nome, marca }, index) => (
+          {vetor.map((produto, index) => (
             <tr key={index}>
               <td>{index + 1}</td>
-              <td>{nome}</td>
-              <td>{marca}</td>
+              <td>{produto.nome}</td>
+              <td>{produto.marca}</td>
               <td>
                 <button className="btn btn-success">Selecionar</button>
               </td>
