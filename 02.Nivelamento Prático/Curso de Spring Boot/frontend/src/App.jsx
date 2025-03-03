@@ -69,11 +69,16 @@ function App() {
       }else{
         setProdutos([...produtos, data]);
         alert("Produto cadastrado com sucesso!");
+        limparFormulario();
       }
       console.log(data);
     } catch (error) {
       console.error("Erro ao cadastrar:", error);
     }
+  };
+  // Limpar o formulário
+  const limparFormulario = () => {
+    setObjProduto(produto);
   };
 
   return (
@@ -81,7 +86,8 @@ function App() {
       <h1>Produtos</h1>
       {/* <p>{JSON.stringify(produtos)}</p> */} {/* Para mostar os dados do array */}
       {/* <p>{JSON.stringify(objProduto)}</p> */} {/* Para testar se está capturando os dados do formulário */}
-      <Formulario botao={btnCadastrar} eventoTeclado={obterDados} cadastrar={cadastrar} />
+      <Formulario botao={btnCadastrar} eventoTeclado={obterDados} cadastrar={cadastrar} obj={objProduto} />
+      {/* obj tem características de um objeto:codigo, nome e marca */}
       <Tabela vetor={produtos} />
     </div>
   );
