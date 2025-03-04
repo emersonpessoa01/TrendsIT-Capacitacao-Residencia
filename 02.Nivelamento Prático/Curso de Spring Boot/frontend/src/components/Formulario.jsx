@@ -8,7 +8,7 @@ const Formulario = ({ botao, eventoTeclado,cadastrar, obj }) => {
       {botao ? (
         <input type="button" value="Cadastrar"onClick={cadastrar} className="btn btn-primary" />
       ) : (
-        <div>
+        <div className="btn-group">
           <input type="button" value="Alterar" className="btn btn-warning" />
           <input type="button" value="Remover" className="btn btn-danger" />
           <input type="button" value="Cancelar" className="btn btn-secondary" />

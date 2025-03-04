@@ -1,6 +1,6 @@
 import React from "react";
 
-const Tabela = ({ vetor }) => {
+const Tabela = ({ vetor, selecionar }) => {
   return (
     <div className="table-responsive">
       <table className="table table-striped">
@@ -19,7 +19,7 @@ const Tabela = ({ vetor }) => {
               <td>{produto.nome}</td>
               <td>{produto.marca}</td>
               <td>
-                <button className="btn btn-success">Selecionar</button>
+                <button className="btn btn-success" onClick={()=>{selecionar(index)}}>Selecionar</button>
               </td>
             </tr>
           ))}

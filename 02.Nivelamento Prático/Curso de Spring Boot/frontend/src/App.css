@@ -1,9 +1,9 @@
-h1{
+h1 {
   text-align: center;
   margin-top: 50px;
 }
-form{
-  display:flex;
+form {
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
@@ -13,35 +13,41 @@ form{
   background: #fff;
   padding: 20px;
   border-radius: 10px;
-   
 }
 
-input{
-    /* width: 100%; */
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+input {
+  /* width: 100%; */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
-input[type="button"]{
-  /* cursor: pointer; */
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
 }
-.table-responsive{
+.btn-group input[type="button"] {
+  border-radius: 6px !important;
+}
+.table-responsive {
   max-width: 500px;
   width: 100%;
   margin: 20px auto;
-  
-  
 }
 /* adiciona sombra  */
 
-.table-responsive tbody{
+.table-responsive tbody {
   background: #f9f9f9;
   border-radius: 12px;
 }
 
 @media (max-width: 480px) {
-  form input{
+  form input {
     flex-direction: column;
     width: 100%;
   }

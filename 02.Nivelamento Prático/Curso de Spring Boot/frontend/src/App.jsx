@@ -14,8 +14,9 @@ function App() {
   const [produtos, setProdutos] = useState([]); //Para mostrar os produtos
   const [objProduto, setObjProduto] = useState(produto); // Para capturar os dados do formulário
 
+  // Para mostrar os dados do array
   useEffect(() => {
-    //Executar uma única vez queando o componente é montado
+    //Executar uma única vez quando o componente é montado
     // fetch("http://localhost:8081/listar")
     //   .then((response) => response.json())
     //   .then((data) => {
@@ -79,7 +80,14 @@ function App() {
   // Limpar o formulário
   const limparFormulario = () => {
     setObjProduto(produto);
+    //limpar o formulário, porque o objeto produto não muda
   };
+
+  // Selecionar produto
+  const selecionarProduto=(indice)=>{
+    setObjProduto(produtos[indice]);
+    setBtnCadastrar(false);
+  }
 
   return (
     <div>
@@ -88,7 +96,7 @@ function App() {
       {/* <p>{JSON.stringify(objProduto)}</p> */} {/* Para testar se está capturando os dados do formulário */}
       <Formulario botao={btnCadastrar} eventoTeclado={obterDados} cadastrar={cadastrar} obj={objProduto} />
       {/* obj tem características de um objeto:codigo, nome e marca */}
-      <Tabela vetor={produtos} />
+      <Tabela vetor={produtos} selecionar={selecionarProduto} />
     </div>
   );
 }
