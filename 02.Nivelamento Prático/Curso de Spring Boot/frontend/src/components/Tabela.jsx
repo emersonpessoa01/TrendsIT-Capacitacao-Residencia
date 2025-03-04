@@ -15,9 +15,9 @@ const Tabela = ({ vetor, selecionar }) => {
         <tbody>
           {vetor.map((produto, index) => (
             <tr key={index}>
-              <td>{index + 1}</td>
-              <td>{produto.nome}</td>
-              <td>{produto.marca}</td>
+              <td data-label="Índice">{index + 1}</td>
+              <td data-label="Nome">{produto.nome}</td>
+              <td data-label="Marca">{produto.marca}</td>
               <td>
                 <button className="btn btn-success" onClick={()=>{selecionar(index)}}>Selecionar</button>
               </td>
