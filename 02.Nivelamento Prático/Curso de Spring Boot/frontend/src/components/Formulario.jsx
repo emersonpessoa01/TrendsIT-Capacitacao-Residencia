@@ -1,6 +1,6 @@
 import React from "react";
 
-const Formulario = ({ botao, eventoTeclado,cadastrar, obj }) => {
+const Formulario = ({ botao, eventoTeclado,cadastrar, obj,cancelar }) => {
   return (
     <form>
       <input autoFocus type="text" placeholder="Nome do produto" className="form-control" value={obj.nome}onChange={eventoTeclado} name="nome" />
@@ -11,7 +11,7 @@ const Formulario = ({ botao, eventoTeclado,cadastrar, obj }) => {
         <div className="btn-group">
           <input type="button" value="Alterar" className="btn btn-warning" />
           <input type="button" value="Remover" className="btn btn-danger" />
-          <input type="button" value="Cancelar" className="btn btn-secondary" />
+          <input type="button" value="Cancelar" onClick={cancelar} className="btn btn-secondary" />
         </div>
       )}
     </form>

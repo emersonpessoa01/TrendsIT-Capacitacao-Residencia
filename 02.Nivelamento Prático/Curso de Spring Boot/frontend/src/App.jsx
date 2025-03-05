@@ -81,6 +81,7 @@ function App() {
   const limparFormulario = () => {
     setObjProduto(produto);
     //limpar o formulário, porque o objeto produto não muda
+    setBtnCadastrar(true);
   };
 
   // Selecionar produto
@@ -94,7 +95,7 @@ function App() {
       <h1>Produtos</h1>
       {/* <p>{JSON.stringify(produtos)}</p> */} {/* Para mostar os dados do array */}
       {/* <p>{JSON.stringify(objProduto)}</p> */} {/* Para testar se está capturando os dados do formulário */}
-      <Formulario botao={btnCadastrar} eventoTeclado={obterDados} cadastrar={cadastrar} obj={objProduto} />
+      <Formulario botao={btnCadastrar} eventoTeclado={obterDados} cadastrar={cadastrar} obj={objProduto} cancelar={limparFormulario} />
       {/* obj tem características de um objeto:codigo, nome e marca */}
       <Tabela vetor={produtos} selecionar={selecionarProduto} />
     </div>

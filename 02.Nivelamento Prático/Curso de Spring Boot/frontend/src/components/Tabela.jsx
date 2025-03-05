@@ -15,7 +15,7 @@ const Tabela = ({ vetor, selecionar }) => {
         <tbody>
           {vetor.map((produto, index) => (
             <tr key={index}>
-              <td data-label="Índice">{index + 1}</td>
+              <td data-label="#">{index + 1}</td>
               <td data-label="Nome">{produto.nome}</td>
               <td data-label="Marca">{produto.marca}</td>
               <td>
