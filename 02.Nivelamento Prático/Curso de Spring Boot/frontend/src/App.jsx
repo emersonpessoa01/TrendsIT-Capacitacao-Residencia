@@ -65,13 +65,56 @@ function App() {
       //   setProdutos([...produtos, data.produto]);
       // }
       //Condição para mostrar os produtos cadastrados dinamicamente
-      if(data.mensagem !== undefined){
+      if (data.mensagem !== undefined) {
         alert(data.mensagem);
-      }else{
+      } else {
         setProdutos([...produtos, data]);
         alert("Produto cadastrado com sucesso!");
         limparFormulario();
       }
+      console.log(data);
+    } catch (error) {
+      console.error("Erro ao cadastrar:", error);
+    }
+  };
+
+  //Função para remover produto
+  const remover = async () => {
+    const header = {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    };
+    try {
+      const response = await fetch(`http://localhost:8081/remover/${objProduto.codigo}`, header);
+
+      const data = await response.json();
+      //Mensagem de confirmação
+      alert(data.mensagem);
+
+      //Cópia do vetor deprodutos para excluir o produto selecionado
+      let vetorTemp = [...produtos];
+      //Filtrar o vetor de produtos
+      // valorTemp = valorTemp.filter((produto) => produto.codigo !== objProduto.codigo);
+
+      //Indice do vetor de produtos
+      let indice = vetorTemp.findIndex((produto) => produto.codigo === objProduto.codigo);
+      console.log(indice); // Para testar se está buscando o produto correto para excluir
+
+      // Lógica ao clicar no botão de selecionarsubir direto para o componente Formulario
+      setObjProduto(vetorTemp[indice]);
+
+      //Excluir o produto selecionado
+      vetorTemp.splice(indice, 1);
+
+      //Atualizar o vetor de produtos
+      setProdutos(vetorTemp);
+
+      //Limpar o formulário
+      limparFormulario();
+
       console.log(data);
     } catch (error) {
       console.error("Erro ao cadastrar:", error);
@@ -85,17 +128,17 @@ function App() {
   };
 
   // Selecionar produto
-  const selecionarProduto=(indice)=>{
+  const selecionarProduto = (indice) => {
     setObjProduto(produtos[indice]);
     setBtnCadastrar(false);
-  }
+  };
 
   return (
     <div>
       <h1>Produtos</h1>
       {/* <p>{JSON.stringify(produtos)}</p> */} {/* Para mostar os dados do array */}
       {/* <p>{JSON.stringify(objProduto)}</p> */} {/* Para testar se está capturando os dados do formulário */}
-      <Formulario botao={btnCadastrar} eventoTeclado={obterDados} cadastrar={cadastrar} obj={objProduto} cancelar={limparFormulario} />
+      <Formulario botao={btnCadastrar} eventoTeclado={obterDados} cadastrar={cadastrar} obj={objProduto} cancelar={limparFormulario} remover={remover} />
       {/* obj tem características de um objeto:codigo, nome e marca */}
       <Tabela vetor={produtos} selecionar={selecionarProduto} />
     </div>
