@@ -77,6 +77,50 @@ function App() {
       console.error("Erro ao cadastrar:", error);
     }
   };
+  //Função para editar produto
+  const editar = async () => {
+    const header = {
+      method: "PUT",
+      body: JSON.stringify(objProduto),
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    };
+    try {
+      const response = await fetch("http://localhost:8081/editar", header);
+
+      const data = await response.json();
+      //condição para mostrar a alteração da tabela dinamicamente
+      // if (data.status === "ok") {
+      //   setProdutos([...produtos, data.produto]);
+      // }
+      //Condição para mostrar os produtos cadastrados dinamicamente
+      if (data.mensagem !== undefined) {
+        alert(data.mensagem);
+      } else {
+        alert("Produto editado com sucesso!");
+        //Cópia do vetor deprodutos para excluir o produto selecionado
+        let vetorTemp = [...produtos];
+        //Filtrar o vetor de produtos
+        // valorTemp = valorTemp.filter((produto) => produto.codigo !== objProduto.codigo);
+
+        //Indice do vetor de produtos
+        let indice = vetorTemp.findIndex((produto) => produto.codigo === objProduto.codigo);
+        console.log(indice); // Para testar se está buscando o produto correto para excluir
+
+        //Alterar o produto selecionado
+        vetorTemp[indice] = objProduto;
+
+        //Atualizar o vetor de produtos
+        setProdutos(vetorTemp);
+        limparFormulario();
+      }
+      console.log(data);
+    } catch (error) {
+      console.error("Erro ao editar:", error);
+    }
+  };
 
   //Função para remover produto
   const remover = async () => {
@@ -103,9 +147,6 @@ function App() {
       let indice = vetorTemp.findIndex((produto) => produto.codigo === objProduto.codigo);
       console.log(indice); // Para testar se está buscando o produto correto para excluir
 
-      // Lógica ao clicar no botão de selecionarsubir direto para o componente Formulario
-      setObjProduto(vetorTemp[indice]);
-
       //Excluir o produto selecionado
       vetorTemp.splice(indice, 1);
 
@@ -117,7 +158,7 @@ function App() {
 
       console.log(data);
     } catch (error) {
-      console.error("Erro ao cadastrar:", error);
+      console.error("Erro ao remover:", error);
     }
   };
   // Limpar o formulário
@@ -138,7 +179,15 @@ function App() {
       <h1>Produtos</h1>
       {/* <p>{JSON.stringify(produtos)}</p> */} {/* Para mostar os dados do array */}
       {/* <p>{JSON.stringify(objProduto)}</p> */} {/* Para testar se está capturando os dados do formulário */}
-      <Formulario botao={btnCadastrar} eventoTeclado={obterDados} cadastrar={cadastrar} obj={objProduto} cancelar={limparFormulario} remover={remover} />
+      <Formulario
+        botao={btnCadastrar}
+        eventoTeclado={obterDados}
+        cadastrar={cadastrar}
+        obj={objProduto}
+        cancelar={limparFormulario}
+        remover={remover}
+        alterar={editar}
+      />
       {/* obj tem características de um objeto:codigo, nome e marca */}
       <Tabela vetor={produtos} selecionar={selecionarProduto} />
     </div>
