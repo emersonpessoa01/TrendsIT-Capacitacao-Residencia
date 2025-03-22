@@ -22,7 +22,7 @@ namespace RacingGame
         private String nome;
 
         public String Nome
-        {
+        {   
             get { return this.nome; }
             set {
                 this.nome = value.ToLower();
