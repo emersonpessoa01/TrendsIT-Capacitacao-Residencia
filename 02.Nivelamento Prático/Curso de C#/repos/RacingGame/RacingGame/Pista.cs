@@ -27,9 +27,19 @@ namespace RacingGame
             }
         }
         public Corredor Atleta { get; set; }
-        public void AtualizarCorrida()
+        public Boolean AtualizarCorrida()
         {
-            this.posAtleta += this.Atleta.Correr();
+            Boolean ganhou = false;
+            if (this.posAtleta < this.Tamanho)
+            {   
+                this.posAtleta += this.Atleta.Correr();
+            }
+            if(this.posAtleta >= this.Tamanho)
+            {
+                ganhou = true;
+                this.posAtleta = this.Tamanho;
+            }
+            return ganhou;
         }
         public void ExibirPista()
         {
