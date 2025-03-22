@@ -30,14 +30,14 @@ namespace RacingGame
                 if(value.Length == 0) this.nome = "d";
                 
             }
-        }
+        } 
 
 
         //Método com características de propriedade Nome, irá executar uma ação(Correr)
         public int Correr()
         {
             Random rnd = new Random();
-            return rnd.Next(1, 101); //retorna um número aleatório entre 1 e 5
+            return rnd.Next(1, 5); //retorna um número aleatório entre 1 e 5
         }
 
     }

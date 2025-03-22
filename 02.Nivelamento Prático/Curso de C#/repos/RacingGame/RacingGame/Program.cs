@@ -10,37 +10,35 @@ namespace RacingGame
     {
         static void Main(string[] args)
         {
-            int tlPista = 100; // tamanho da pista
-            int posicao = 0; // posição inicial do corredor na pista
-            string pista = "";
-            string CorredorPista = "";
-            string numerosPista = "";
-
+            int tlPista = 100; //tamanho da pista
+            int posicaoC1 = 0; //posição inicial do corredor na pista
             Corredor c1 = new Corredor();
-            c1.Nome = "d";
+            c1.Nome = "e";
+            String pista = ""; //Vai representar a pista
+            string corredorPista = ""; //Vai representar o corredor na pista
+            posicaoC1 = c1.Correr(); //Chama o método correr da classe corredor
 
-            // Monta a imagem do corredor na pista na posição inicial
-            pista = "";
-            CorredorPista = "";
-            posicao = c1.Correr();
 
-            for (int i = 1; i <= tlPista; i++) // Corrigido de i >= tlPista para i <= tlPista
+            //Montar a imagem do corredor na pista
+            pista = ""; //Inicia a pista vazia
+            corredorPista = ""; //Inicia o corredor na pista vazia
+            for (int i = 0; i <= tlPista; i++)
             {
-                pista += "_"; // Corrigido erro de ponto e vírgula
-
-                if (i == posicao)
+                pista += "_"; //Monta a pista
+                if (i == posicaoC1)
                 {
-                    CorredorPista += c1.Nome;
+                    corredorPista += c1.Nome; //Monta o corredor na pista
                 }
                 else
                 {
-                    CorredorPista += " ";
+                    corredorPista += " "; //Monta o corredor na pista
                 }
             }
-            // Exibir a pista, a posição do corredor e a numeração da pista
-            Console.WriteLine(CorredorPista);
-            Console.WriteLine(pista);
+            Console.WriteLine(pista); //Imprime a pista
+            Console.WriteLine(corredorPista); //Imprime o corredor na pista
+            //Console.WriteLine("Nome: " + c1.Nome);
             Console.ReadKey();
+
         }
     }
 }
