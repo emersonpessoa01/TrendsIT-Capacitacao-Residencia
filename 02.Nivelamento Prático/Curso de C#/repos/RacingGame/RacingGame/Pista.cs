@@ -8,58 +8,62 @@ namespace RacingGame
 {
     public class Pista
     {
+
         public Pista(int tamanho, Corredor atleta)
         {
             this.Tamanho = tamanho;
             this.Atleta = atleta;
             this.posAtleta = 0;
-          
-
         }
         public int Tamanho { get; set; }
 
-        private int posAtleta; // Change posAtleta to int
-        public int PosAtleta // Change PosAtleta to int
+        private int posAtleta;
+
+        public int PosAtleta
         {
-            get
-            {
-                return this.posAtleta;
-            }
+            get { return this.posAtleta; }
+            //set { this.posAtleta = value; }
         }
+
         public Corredor Atleta { get; set; }
+
         public Boolean AtualizarCorrida()
         {
             Boolean ganhou = false;
             if (this.posAtleta < this.Tamanho)
-            {   
+            {
                 this.posAtleta += this.Atleta.Correr();
             }
-            if(this.posAtleta >= this.Tamanho)
+            if (this.posAtleta >= this.Tamanho)
             {
                 ganhou = true;
                 this.posAtleta = this.Tamanho;
             }
             return ganhou;
         }
+
         public void ExibirPista()
         {
-            String pista = ""; //Inicia a pista vazia
-            String corredorPista = ""; //Inicia o corredor na pista vazia
-            for (int i = 0; i <= this.Tamanho; i++)
+            //Monta a imagem do corredor na pista no pos atual
+            string pista = "";
+            string corredorPista = "";
+            for (int i = 1; i <= this.Tamanho; i++)
             {
-                pista += "_"; //Monta a pista
+                pista += "_";
                 if (i == this.posAtleta)
                 {
-                    corredorPista += this.Atleta.Nome; //Monta o corredor na pista
+                    corredorPista += this.Atleta.Nome;
                 }
                 else
                 {
-                    corredorPista += " "; //Monta o corredor na pista
+                    corredorPista += " ";
                 }
             }
-            Console.WriteLine(corredorPista); //Imprime o corredor na pista
-            Console.WriteLine(pista); //Imprime a pista
+            //exibir a minha pista e o corredor
+            Console.WriteLine(corredorPista);
+            Console.WriteLine(pista);
         }
+
     }
 }
-    
+
