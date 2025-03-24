@@ -8,6 +8,8 @@ namespace RacingGame
 {
     public class Corredor
     {
+        
+        public static Random rnd = new Random();
         //Construtor é uma função sem tipo de retorno que tem o mesmo nome da classe
         public Corredor()
         {
@@ -36,7 +38,6 @@ namespace RacingGame
         //Método com características de propriedade Nome, irá executar uma ação(Correr)
         public int Correr()
         {
-            Random rnd = new Random();
             return rnd.Next(1, 10); //retorna um número aleatório entre 1 e 10
         }
 
