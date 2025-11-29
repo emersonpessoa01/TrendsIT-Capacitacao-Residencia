@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using api.data;
 using Microsoft.AspNetCore.Mvc;
 using api.models;
+using Microsoft.EntityFrameworkCore;
 
 namespace api.Controllers
 {
@@ -17,15 +18,21 @@ namespace api.Controllers
             _dc = context;
         }
 
-        [HttpPost("api")]
+        [HttpPost]
         public async Task<ActionResult> Cadastrar([FromBody] Pessoa pessoa)
         {
             _dc.Pessoa.Add(pessoa);
             await _dc.SaveChangesAsync();
-            return Created("/pessoa", pessoa);
+            return Created("/api/pessoa", pessoa);
         }
 
-       
+        [HttpGet]
+        public async Task<ActionResult> Listar()
+        {
+            var dados = await _dc.Pessoa.ToListAsync();
+            return Ok(dados);
+        }
+
         [HttpGet("oi")]
         public string Get()
         {
