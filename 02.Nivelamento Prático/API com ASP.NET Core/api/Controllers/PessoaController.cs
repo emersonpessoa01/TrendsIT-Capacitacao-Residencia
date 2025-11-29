@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using api.data;
 using Microsoft.AspNetCore.Mvc;
@@ -16,14 +17,15 @@ namespace api.Controllers
             _dc = context;
         }
 
-        [HttpPost]
+        [HttpPost("api")]
         public async Task<ActionResult> Cadastrar([FromBody] Pessoa pessoa)
         {
             _dc.Pessoa.Add(pessoa);
             await _dc.SaveChangesAsync();
-            return Created("api/pessoa", pessoa);
+            return Created("/pessoa", pessoa);
         }
 
+       
         [HttpGet("oi")]
         public string Get()
         {
