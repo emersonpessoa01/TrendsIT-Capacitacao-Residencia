@@ -8,6 +8,6 @@ namespace api.models
         public int Id { get; set; }
         public required string Nome { get; set; }
         public int Idade { get; set; }
-        public int Cidade { get; set; }
+        public required string Cidade { get; set; }
     }
 }

@@ -1,16 +1,30 @@
 using System.Threading.Tasks;
 using api.data;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-
+using api.models;
 
 namespace api.Controllers
 {
-    [Controller]
-    [Route("[controller]")]
-    public class PessoaController
+    [ApiController]
+    [Route("api/[controller]")]
+    public class PessoaController : ControllerBase
     {
-        [HttpGet("Oi")]
+        private readonly DataContent _dc;
+
+        public PessoaController(DataContent context)
+        {
+            _dc = context;
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Cadastrar([FromBody] Pessoa pessoa)
+        {
+            _dc.Pessoa.Add(pessoa);
+            await _dc.SaveChangesAsync();
+            return Created("api/pessoa", pessoa);
+        }
+
+        [HttpGet("oi")]
         public string Get()
         {
             return "Hello World!";
