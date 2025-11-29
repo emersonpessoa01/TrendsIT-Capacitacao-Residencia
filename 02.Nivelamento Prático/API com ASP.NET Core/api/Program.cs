@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container
-builder.Services.AddOpenApi();
+// Add services
+builder.Services.AddControllers();
 
-// Configurar o EF Core com MySQL
+// EF / MySQL
 builder.Services.AddDbContext<DataContent>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("conexaoMySQL"),
@@ -14,4 +14,20 @@ builder.Services.AddDbContext<DataContent>(options =>
     )
 );
 
+// Swagger (Swashbuckle)
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+app.MapControllers();
+
+app.Run();
