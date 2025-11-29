@@ -32,6 +32,14 @@ namespace api.Controllers
             var dados = await _dc.Pessoa.ToListAsync();
             return Ok(dados);
         }
+        [HttpGet("{id}")]
+        public ActionResult<Pessoa> filtrarPorId(int id)
+        {
+            var pessoa = _dc.Pessoa.FirstOrDefault(p => p.Id == id);
+            if (pessoa == null)
+                return NotFound();
+            return Ok(pessoa);
+        }
 
         [HttpGet("oi")]
         public string Get()
