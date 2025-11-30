@@ -41,6 +41,21 @@ namespace api.Controllers
             return Ok(pessoa);
         }
 
+        [HttpPut("{id}")]
+        public async Task<ActionResult> Atualizar(int id, [FromBody] Pessoa pessoaAtualizada)
+        {
+            var pessoa = await _dc.Pessoa.FindAsync(id);
+            if (pessoa == null)
+                return NotFound();
+            pessoa.Nome = pessoaAtualizada.Nome;
+            pessoa.Idade = pessoaAtualizada.Idade;
+            await _dc.SaveChangesAsync();
+            return NoContent();
+            // _dc.Pessoa.Update(pessoaAtualizada);
+            // await _dc.SaveChangesAsync();
+            // return Ok(pessoaAtualizada);
+        }
+
         [HttpGet("oi")]
         public string Get()
         {
