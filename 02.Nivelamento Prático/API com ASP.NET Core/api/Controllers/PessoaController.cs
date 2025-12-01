@@ -55,6 +55,17 @@ namespace api.Controllers
             // await _dc.SaveChangesAsync();
             // return Ok(pessoaAtualizada);
         }
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Deletar(int id)
+        {
+            var pessoa = await _dc.Pessoa.FindAsync(id);
+            if (pessoa == null)
+                return NotFound();
+            _dc.Pessoa.Remove(pessoa);
+            await _dc.SaveChangesAsync();
+            return NoContent();
+        }
+
 
         [HttpGet("oi")]
         public string Get()
