@@ -1,7 +1,7 @@
 # API com ASP.NET Core 5 e MySQL
 
 <div align="center">
-  <img src="../api/images/NET_Core_Logo.svg.png" width="30%"/>    
+<img src="../../../image/NET_Core_Logo.svg.png" width="30%" alt="Logo ASP.NET"/>    
 </div>
 
 <div align="center">
